@@ -27,8 +27,8 @@
     <!-- Safe CSS Animations -->
     <style>
       @keyframes soft-pulse {
-        0%, 100% { transform: scale(1); opacity: 0.85; }
-        50% { transform: scale(1.12); opacity: 1; }
+        0%, 100% { opacity: 0.75; }
+        50% { opacity: 1; }
       }
       @keyframes dash-flow {
         0% { stroke-dashoffset: 40; }
@@ -40,7 +40,6 @@
       }
 
       .pulse-core {
-        transform-origin: center;
         animation: soft-pulse 3s ease-in-out infinite;
       }
       .flow-signal-1 {

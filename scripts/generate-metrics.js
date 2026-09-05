@@ -90,10 +90,10 @@ function generateMetricsSvg(data) {
       .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
       .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
       @keyframes pulse {
-        0%, 100% { opacity: 1; transform: scale(1); }
-        50% { opacity: 0.5; transform: scale(0.9); }
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.35; }
       }
-      .live-dot { animation: pulse 2s infinite ease-in-out; transform-origin: center; }
+      .live-dot { animation: pulse 2s infinite ease-in-out; }
     </style>
   </defs>
 
@@ -102,48 +102,56 @@ function generateMetricsSvg(data) {
   <path d="M 0 10 C 0 4.48 4.48 0 10 0 L 910 0 C 915.52 0 920 4.48 920 10 L 920 3 L 0 3 Z" fill="url(#top-bar)" />
 
   <!-- Header Row -->
-  <g transform="translate(24, 20)">
-    <circle class="live-dot" cx="4" cy="4" r="3.5" fill="#10b981" />
-    <text x="14" y="8" fill="#0f172a" font-size="11" font-weight="700" class="font-sans">GITHUB ACTIVITY &amp; ECOSYSTEM METRICS</text>
-    <text x="740" y="8" fill="#64748b" font-size="9.5" class="font-mono">LAST SYNC: ${generatedAt}</text>
+  <g transform="translate(24, 22)">
+    <circle class="live-dot" cx="4" cy="-3" r="3.5" fill="#10b981" />
+    <text x="16" y="1" fill="#0f172a" font-size="11" font-weight="700" class="font-sans">GITHUB ACTIVITY &amp; ECOSYSTEM METRICS</text>
+    <text x="735" y="1" fill="#64748b" font-size="9.5" class="font-mono">LAST SYNC: ${generatedAt}</text>
   </g>
   <line x1="24" y1="36" x2="896" y2="36" stroke="#f1f5f9" stroke-width="1.2" />
 
   <!-- 4 Stat Tiles -->
   <g transform="translate(24, 48)">
     <!-- Tile 1: Repos -->
-    <rect x="0" y="0" width="100" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
-    <text x="10" y="18" fill="#64748b" font-size="8.5" font-weight="600" class="font-sans">PUBLIC REPOS</text>
-    <text x="10" y="46" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${user.public_repos || repos.length}</text>
-    <text x="52" y="45" fill="#6366f1" font-size="9" font-weight="600" class="font-sans">repos</text>
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="102" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="12" y="20" fill="#64748b" font-size="8.5" font-weight="600" class="font-sans">PUBLIC REPOS</text>
+      <text x="12" y="47" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${user.public_repos || repos.length}</text>
+      <text x="54" y="46" fill="#6366f1" font-size="9" font-weight="600" class="font-sans">repos</text>
+    </g>
 
     <!-- Tile 2: Stars -->
-    <rect x="110" y="0" width="100" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
-    <text x="10" y="18" fill="#64748b" font-size="8.5" font-weight="600" class="font-sans">STARGAZERS</text>
-    <text x="10" y="46" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${stars}</text>
-    <text x="40" y="45" fill="#f59e0b" font-size="9" font-weight="600" class="font-sans">stars</text>
+    <g transform="translate(109, 0)">
+      <rect x="0" y="0" width="102" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="12" y="20" fill="#64748b" font-size="8.5" font-weight="600" class="font-sans">STARGAZERS</text>
+      <text x="12" y="47" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${stars}</text>
+      <text x="36" y="46" fill="#f59e0b" font-size="9" font-weight="600" class="font-sans">stars</text>
+    </g>
 
     <!-- Tile 3: Network -->
-    <rect x="220" y="0" width="100" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
-    <text x="10" y="18" fill="#64748b" font-size="8.5" font-weight="600" class="font-sans">FOLLOWERS</text>
-    <text x="10" y="46" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${user.followers || 0}</text>
-    <text x="40" y="45" fill="#10b981" font-size="9" font-weight="600" class="font-sans">peers</text>
+    <g transform="translate(218, 0)">
+      <rect x="0" y="0" width="102" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="12" y="20" fill="#64748b" font-size="8.5" font-weight="600" class="font-sans">FOLLOWERS</text>
+      <text x="12" y="47" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${user.followers || 0}</text>
+      <text x="36" y="46" fill="#10b981" font-size="9" font-weight="600" class="font-sans">peers</text>
+    </g>
 
     <!-- Tile 4: Languages -->
-    <rect x="330" y="0" width="100" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
-    <text x="10" y="18" fill="#64748b" font-size="8.5" font-weight="600" class="font-sans">LANGUAGES</text>
-    <text x="10" y="46" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${Object.keys(languages).length}</text>
-    <text x="48" y="45" fill="#8b5cf6" font-size="9" font-weight="600" class="font-sans">stacks</text>
+    <g transform="translate(327, 0)">
+      <rect x="0" y="0" width="102" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="12" y="20" fill="#64748b" font-size="8.5" font-weight="600" class="font-sans">LANGUAGES</text>
+      <text x="12" y="47" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${Object.keys(languages).length}</text>
+      <text x="36" y="46" fill="#8b5cf6" font-size="9" font-weight="600" class="font-sans">stacks</text>
+    </g>
   </g>
 
   <!-- Right: Stack Distribution Monitor -->
-  <g transform="translate(470, 48)">
-    <rect x="0" y="0" width="426" height="98" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <g transform="translate(465, 48)">
+    <rect x="0" y="0" width="431" height="98" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
     <text x="14" y="18" fill="#475569" font-size="9" font-weight="700" class="font-sans" letter-spacing="0.5">PRIMARY LANGUAGE SPECTRUM (BY REPOSITORIES)</text>
 
     <!-- Progress bar track -->
     <g transform="translate(14, 28)">
-      <rect x="0" y="0" width="398" height="8" rx="2" fill="#e2e8f0" />
+      <rect x="0" y="0" width="403" height="8" rx="2" fill="#e2e8f0" />
       <g>
         ${langSegments}
       </g>
@@ -157,13 +165,13 @@ function generateMetricsSvg(data) {
     <!-- Verified Badge -->
     <g transform="translate(14, 88)">
       <text x="0" y="0" fill="#10b981" font-size="8.5" font-weight="600" class="font-sans">● Verified via GitHub REST API</text>
-      <text x="215" y="0" fill="#94a3b8" font-size="8.5" class="font-mono">Node ID: ${user.node_id || 'U_kgDOCNW0RQ'}</text>
+      <text x="220" y="0" fill="#94a3b8" font-size="8.5" class="font-mono">Node ID: ${user.node_id || 'U_kgDOCNW0RQ'}</text>
     </g>
   </g>
 
   <!-- Bottom Sub-bar (Left) -->
   <g transform="translate(24, 122)">
-    <rect x="0" y="0" width="430" height="24" rx="4" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.8" />
+    <rect x="0" y="0" width="429" height="24" rx="4" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.8" />
     <text x="10" y="16" fill="#475569" font-size="9" font-weight="600" class="font-sans">Status: Active on Multimodal Machine Learning &amp; Web3 Infrastructure</text>
   </g>
 </svg>`;
