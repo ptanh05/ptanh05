@@ -182,7 +182,7 @@ My work sits at the intersection of:
 <br />
 
 <div align="center">
-  <img src="./assets/github-contribution-grid-snake.svg" alt="GitHub Contribution Cute Pet Expedition" width="100%" />
+  <img src="./assets/cute-pets.svg" alt="GitHub Contribution Cute Pet Expedition" width="100%" />
 </div>
 
 <p align="center">
