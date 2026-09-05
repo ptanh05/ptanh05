@@ -7,19 +7,23 @@
       <stop offset="100%" stop-color="#f1f5f9" />
     </linearGradient>
 
-    <!-- Indigo to Purple Accent Gradient -->
-    <linearGradient id="purple-blue-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Animated Shimmer Gradient -->
+    <linearGradient id="purple-blue-grad" x1="0%" y1="0%" x2="200%" y2="0%">
       <stop offset="0%" stop-color="#4f46e5" />
-      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="25%" stop-color="#8b5cf6" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="75%" stop-color="#4f46e5" />
       <stop offset="100%" stop-color="#8b5cf6" />
+      <animate attributeName="x1" from="0%" to="-100%" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="x2" from="200%" to="100%" dur="6s" repeatCount="indefinite" />
     </linearGradient>
 
     <linearGradient id="node-glow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.15" />
-      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.05" />
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.04" />
     </linearGradient>
 
-    <!-- Subtle Dot Grid Pattern for Light Mode -->
+    <!-- Subtle Dot Grid Pattern -->
     <pattern id="light-grid" width="24" height="24" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1" fill="#cbd5e1" fill-opacity="0.6" />
     </pattern>
@@ -27,31 +31,43 @@
     <!-- Safe CSS Animations -->
     <style>
       @keyframes soft-pulse {
-        0%, 100% { opacity: 0.75; }
+        0%, 100% { opacity: 0.8; }
         50% { opacity: 1; }
       }
       @keyframes dash-flow {
-        0% { stroke-dashoffset: 40; }
+        0% { stroke-dashoffset: 48; }
         100% { stroke-dashoffset: 0; }
       }
+      @keyframes dash-flow-rev {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: 48; }
+      }
       @keyframes ring-expand {
-        0% { r: 6px; opacity: 0.8; stroke-width: 1.5px; }
-        100% { r: 16px; opacity: 0; stroke-width: 0.5px; }
+        0% { r: 6px; opacity: 0.85; stroke-width: 1.8px; }
+        100% { r: 22px; opacity: 0; stroke-width: 0.4px; }
       }
 
       .pulse-core {
-        animation: soft-pulse 3s ease-in-out infinite;
+        animation: soft-pulse 2.5s ease-in-out infinite;
       }
       .flow-signal-1 {
         stroke-dasharray: 4 6;
-        animation: dash-flow 2s linear infinite;
+        animation: dash-flow 1.8s linear infinite;
       }
       .flow-signal-2 {
         stroke-dasharray: 5 8;
-        animation: dash-flow 2.8s linear infinite;
+        animation: dash-flow 2.4s linear infinite;
       }
-      .pulse-ring {
-        animation: ring-expand 2.5s cubic-bezier(0.2, 0.6, 0.35, 1) infinite;
+      .flow-signal-3 {
+        stroke-dasharray: 4 6;
+        animation: dash-flow-rev 2s linear infinite;
+      }
+      .pulse-ring-1 {
+        animation: ring-expand 2.6s cubic-bezier(0.2, 0.6, 0.35, 1) infinite;
+      }
+      .pulse-ring-2 {
+        animation: ring-expand 2.6s cubic-bezier(0.2, 0.6, 0.35, 1) infinite;
+        animation-delay: 1.3s;
       }
       .font-sans {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -66,7 +82,7 @@
   <rect width="920" height="200" rx="12" fill="url(#light-bg)" stroke="#e2e8f0" stroke-width="1.2" />
   <rect width="920" height="200" rx="12" fill="url(#light-grid)" />
 
-  <!-- Subtle Top Accent Line -->
+  <!-- Animated Top Accent Line -->
   <path d="M 0 12 C 0 5.37 5.37 0 12 0 L 908 0 C 914.63 0 920 5.37 920 12 L 920 3 L 0 3 Z" fill="url(#purple-blue-grad)" />
 
   <!-- Left Side: Identity and Value Proposition -->
@@ -74,7 +90,9 @@
     <!-- Pill Badge -->
     <g transform="translate(0, 0)">
       <rect x="0" y="0" width="220" height="24" rx="12" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1" />
-      <circle cx="12" cy="12" r="4" fill="#6366f1" />
+      <circle cx="12" cy="12" r="4" fill="#6366f1">
+        <animate attributeName="r" values="3.5;4.5;3.5" dur="2s" repeatCount="indefinite" />
+      </circle>
       <text x="24" y="16" fill="#4338ca" font-size="11" font-weight="600" class="font-sans">AI &amp; SOFTWARE ENGINEERING</text>
     </g>
 
@@ -94,10 +112,12 @@
     </text>
   </g>
 
-  <!-- Right Side: Clean Light-Mode Neural Network Graphic -->
+  <!-- Right Side: Animated Light-Mode Neural Network Graphic -->
   <g transform="translate(620, 25)">
     <!-- Ambient Halo Background -->
-    <circle cx="140" cy="75" r="70" fill="url(#node-glow)" />
+    <circle cx="140" cy="75" r="72" fill="url(#node-glow)">
+      <animate attributeName="r" values="68;74;68" dur="4s" repeatCount="indefinite" />
+    </circle>
 
     <!-- Network Graph Edges (Static Light Gray) -->
     <g stroke="#cbd5e1" stroke-width="1.2">
@@ -115,8 +135,9 @@
       <line class="flow-signal-1" x1="40" y1="40" x2="110" y2="75" stroke="#6366f1" stroke-width="1.8" />
       <line class="flow-signal-2" x1="40" y1="110" x2="110" y2="75" stroke="#8b5cf6" stroke-width="1.8" />
       <line class="flow-signal-1" x1="110" y1="75" x2="170" y2="40" stroke="#6366f1" stroke-width="2" />
-      <line class="flow-signal-2" x1="110" y1="75" x2="170" y2="110" stroke="#a855f7" stroke-width="2" />
+      <line class="flow-signal-3" x1="110" y1="75" x2="170" y2="110" stroke="#a855f7" stroke-width="2" />
       <line class="flow-signal-1" x1="170" y1="40" x2="230" y2="75" stroke="#3b82f6" stroke-width="2" />
+      <line class="flow-signal-2" x1="170" y1="110" x2="230" y2="75" stroke="#06b6d4" stroke-width="2" />
     </g>
 
     <!-- Node 1 (Input A) -->
@@ -133,9 +154,10 @@
       <text x="-24" y="20" fill="#64748b" font-size="9" font-weight="600" class="font-mono">Text</text>
     </g>
 
-    <!-- Node 3: Center Fusion Core -->
+    <!-- Node 3: Center Fusion Core with Double Ripple -->
     <g transform="translate(110, 75)">
-      <circle class="pulse-ring" cx="0" cy="0" r="8" fill="none" stroke="#6366f1" />
+      <circle class="pulse-ring-1" cx="0" cy="0" r="8" fill="none" stroke="#6366f1" />
+      <circle class="pulse-ring-2" cx="0" cy="0" r="8" fill="none" stroke="#8b5cf6" />
       <circle cx="0" cy="0" r="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2" />
       <circle class="pulse-core" cx="0" cy="0" r="6" fill="#4f46e5" />
       <text x="-16" y="26" fill="#4f46e5" font-size="9.5" font-weight="700" class="font-sans">Fusion</text>

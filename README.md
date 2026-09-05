@@ -1,5 +1,9 @@
 <div align="center">
   <img src="./assets/hero.svg" alt="Phùng Thế Anh - GitHub Profile" width="100%" />
+  <br />
+  <a href="https://github.com/ptanh05">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=2800&pause=1000&color=4F46E5&center=true&vCenter=true&width=560&lines=Exploring+reliable+multimodal+AI+%26+calibration...;Architecting+production-grade+multi-tenant+SaaS...;Developing+decentralized+infrastructure+on+Sui+%26+Aptos..." alt="Typing SVG" />
+  </a>
 </div>
 
 <p align="center">

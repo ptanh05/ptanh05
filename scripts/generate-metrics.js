@@ -83,10 +83,14 @@ function generateMetricsSvg(data) {
       <stop offset="100%" stop-color="#f8fafc" />
     </linearGradient>
 
-    <linearGradient id="top-bar" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="top-bar" x1="0%" y1="0%" x2="200%" y2="0%">
       <stop offset="0%" stop-color="#4f46e5" />
-      <stop offset="50%" stop-color="#6366f1" />
-      <stop offset="100%" stop-color="#06b6d4" />
+      <stop offset="25%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="75%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#6366f1" />
+      <animate attributeName="x1" from="0%" to="-100%" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="x2" from="200%" to="100%" dur="7s" repeatCount="indefinite" />
     </linearGradient>
 
     <style>
