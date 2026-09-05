@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 140" width="100%" height="100%">
+  <defs>
+    <style>
+      .s-bg { fill: #ebedf0; rx: 2px; }
+      .s-l1 { fill: #9be9a8; rx: 2px; }
+      .s-l2 { fill: #40c463; rx: 2px; }
+      .s-l3 { fill: #30a14e; rx: 2px; }
+      .s-l4 { fill: #216e39; rx: 2px; }
+      .snake-head { fill: #4f46e5; }
+      .snake-body { fill: #818cf8; }
+
+      @keyframes snake-crawl {
+        0% { transform: translate(120px, 40px); }
+        25% { transform: translate(340px, 40px); }
+        50% { transform: translate(340px, 76px); }
+        75% { transform: translate(580px, 76px); }
+        100% { transform: translate(720px, 40px); }
+      }
+      .snake-group {
+        animation: snake-crawl 10s ease-in-out infinite alternate;
+      }
+      .font-sans {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+    </style>
+  </defs>
+
+  <rect width="850" height="140" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2" />
+
+  <!-- Header -->
+  <text x="24" y="24" fill="#0f172a" font-size="11" font-weight="700" class="font-sans">1,390 CONTRIBUTIONS IN THE LAST YEAR • SNAKE TRAIL</text>
+
+  <!-- Contribution Grid (Representative 52 weeks x 7 days) -->
+  <g transform="translate(24, 38)">
+    <!-- Week columns sampled -->
+    <!-- Column generator sample -->
+    <g transform="translate(0,0)"><rect y="0" width="11" height="11" class="s-l1"/><rect y="13" width="11" height="11" class="s-l2"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(14,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(28,0)"><rect y="0" width="11" height="11" class="s-l1"/><rect y="13" width="11" height="11" class="s-l2"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(42,0)"><rect y="0" width="11" height="11" class="s-bg"/><rect y="13" width="11" height="11" class="s-l1"/><rect y="26" width="11" height="11" class="s-l2"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(56,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(70,0)"><rect y="0" width="11" height="11" class="s-l3"/><rect y="13" width="11" height="11" class="s-l4"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(84,0)"><rect y="0" width="11" height="11" class="s-l1"/><rect y="13" width="11" height="11" class="s-l2"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(98,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(112,0)"><rect y="0" width="11" height="11" class="s-l3"/><rect y="13" width="11" height="11" class="s-l4"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(126,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(140,0)"><rect y="0" width="11" height="11" class="s-l1"/><rect y="13" width="11" height="11" class="s-l2"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(154,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(168,0)"><rect y="0" width="11" height="11" class="s-l3"/><rect y="13" width="11" height="11" class="s-l4"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(182,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(196,0)"><rect y="0" width="11" height="11" class="s-l1"/><rect y="13" width="11" height="11" class="s-l2"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(210,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(224,0)"><rect y="0" width="11" height="11" class="s-l3"/><rect y="13" width="11" height="11" class="s-l4"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(238,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(252,0)"><rect y="0" width="11" height="11" class="s-l1"/><rect y="13" width="11" height="11" class="s-l2"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(266,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(280,0)"><rect y="0" width="11" height="11" class="s-l3"/><rect y="13" width="11" height="11" class="s-l4"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(294,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(308,0)"><rect y="0" width="11" height="11" class="s-l1"/><rect y="13" width="11" height="11" class="s-l2"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(322,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(336,0)"><rect y="0" width="11" height="11" class="s-l3"/><rect y="13" width="11" height="11" class="s-l4"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(350,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(364,0)"><rect y="0" width="11" height="11" class="s-l1"/><rect y="13" width="11" height="11" class="s-l2"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(378,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(392,0)"><rect y="0" width="11" height="11" class="s-l3"/><rect y="13" width="11" height="11" class="s-l4"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(406,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(420,0)"><rect y="0" width="11" height="11" class="s-l1"/><rect y="13" width="11" height="11" class="s-l2"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(434,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(448,0)"><rect y="0" width="11" height="11" class="s-l3"/><rect y="13" width="11" height="11" class="s-l4"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(462,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(476,0)"><rect y="0" width="11" height="11" class="s-l1"/><rect y="13" width="11" height="11" class="s-l2"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(490,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(504,0)"><rect y="0" width="11" height="11" class="s-l3"/><rect y="13" width="11" height="11" class="s-l4"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(518,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(532,0)"><rect y="0" width="11" height="11" class="s-l1"/><rect y="13" width="11" height="11" class="s-l2"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(546,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(560,0)"><rect y="0" width="11" height="11" class="s-l3"/><rect y="13" width="11" height="11" class="s-l4"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(574,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(588,0)"><rect y="0" width="11" height="11" class="s-l1"/><rect y="13" width="11" height="11" class="s-l2"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(602,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(616,0)"><rect y="0" width="11" height="11" class="s-l3"/><rect y="13" width="11" height="11" class="s-l4"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(630,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(644,0)"><rect y="0" width="11" height="11" class="s-l1"/><rect y="13" width="11" height="11" class="s-l2"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(658,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l4"/><rect y="39" width="11" height="11" class="s-l3"/><rect y="52" width="11" height="11" class="s-l2"/><rect y="65" width="11" height="11" class="s-l1"/></g>
+    <g transform="translate(672,0)"><rect y="0" width="11" height="11" class="s-l3"/><rect y="13" width="11" height="11" class="s-l4"/><rect y="26" width="11" height="11" class="s-l3"/><rect y="39" width="11" height="11" class="s-l2"/><rect y="52" width="11" height="11" class="s-l1"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(686,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l3"/><rect y="26" width="11" height="11" class="s-l2"/><rect y="39" width="11" height="11" class="s-l1"/><rect y="52" width="11" height="11" class="s-bg"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(700,0)"><rect y="0" width="11" height="11" class="s-l1"/><rect y="13" width="11" height="11" class="s-l2"/><rect y="26" width="11" height="11" class="s-l1"/><rect y="39" width="11" height="11" class="s-bg"/><rect y="52" width="11" height="11" class="s-bg"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+    <g transform="translate(714,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l1"/><rect y="26" width="11" height="11" class="s-bg"/><rect y="39" width="11" height="11" class="s-bg"/><rect y="52" width="11" height="11" class="s-bg"/><rect y="65" width="11" height="11" class="s-bg"/></g>
+
+    <!-- Animated Snake Crawling Through Grid -->
+    <g class="snake-group">
+      <rect x="0" y="0" width="11" height="11" rx="3" class="snake-head" />
+      <circle cx="3.5" cy="3.5" r="1.5" fill="#ffffff" />
+      <circle cx="7.5" cy="3.5" r="1.5" fill="#ffffff" />
+      <rect x="-14" y="0" width="11" height="11" rx="2" class="snake-body" />
+      <rect x="-28" y="0" width="11" height="11" rx="2" class="snake-body" />
+      <rect x="-42" y="0" width="11" height="11" rx="2" class="snake-body" opacity="0.7" />
+    </g>
+  </g>
+</svg>

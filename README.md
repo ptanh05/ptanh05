@@ -28,7 +28,9 @@
   <i>"Reliable intelligence is not measured by performance on ideal data, but by robustness when the world shifts and senses fail."</i>
 </p>
 
----
+<div align="center">
+  <img src="./assets/divider.svg" alt="divider" width="100%" />
+</div>
 
 ### 👨‍💻 About Me
 
@@ -39,7 +41,9 @@ My work sits at the intersection of:
 - **Full-Stack & SaaS Engineering**: Architecting multi-tenant, tamper-resistant web platforms with strict security and state machines.
 - **Blockchain Protocols**: Building smart contracts and decentralized verification pipelines on **Sui** and **Aptos**.
 
----
+<div align="center">
+  <img src="./assets/divider.svg" alt="divider" width="100%" />
+</div>
 
 ### 🔭 Currently Exploring
 
@@ -66,7 +70,9 @@ My work sits at the intersection of:
   </tr>
 </table>
 
----
+<div align="center">
+  <img src="./assets/divider.svg" alt="divider" width="100%" />
+</div>
 
 ### 🚀 Featured Projects
 
@@ -74,6 +80,7 @@ My work sits at the intersection of:
   <tr>
     <td width="50%" valign="top">
       <h3>🔬 <a href="https://github.com/ptanh05/RM-VMusic">RM-VMusic</a></h3>
+      <p><img src="https://img.shields.io/badge/Benchmark-0%25%20Artist%20Leakage-EEF2FF?style=flat-square&color=4F46E5" alt="Benchmark" /></p>
       <p><b>Reliable Multimodal Vietnamese Music Classification</b></p>
       <p>Scientific benchmark exploring multimodal reliability, modality missingness fallbacks, and uncertainty calibration with 0% artist leakage across 5,515 tracks.</p>
       <p><code>Python</code> <code>PyTorch</code> <code>Transformers</code> <code>Multimodal AI</code></p>
@@ -81,6 +88,7 @@ My work sits at the intersection of:
     </td>
     <td width="50%" valign="top">
       <h3>🛡️ <a href="https://github.com/ptanh05/SmartAttend">SmartAttend</a></h3>
+      <p><img src="https://img.shields.io/badge/Production%20SaaS-Multi--Tenant-EEF2FF?style=flat-square&color=4F46E5" alt="Production SaaS" /></p>
       <p><b>Multi-Tenant University Attendance SaaS Engine</b></p>
       <p>Production platform with dynamic 6-character rotating challenge codes, server-side state machines, anti-cheating hardware trust scoring, and strict RBAC.</p>
       <p><code>Next.js 16</code> <code>TypeScript</code> <code>Neon PostgreSQL</code> <code>Drizzle ORM</code></p>
@@ -90,6 +98,7 @@ My work sits at the intersection of:
   <tr>
     <td width="50%" valign="top">
       <h3>⚛️ <a href="https://github.com/ptanh05/Quantum-Kernel-SVM">QFraud Shield</a></h3>
+      <p><img src="https://img.shields.io/badge/Hybrid%20AI-Random%20Forest%20%2B%20Qiskit-EEF2FF?style=flat-square&color=4F46E5" alt="Hybrid AI" /></p>
       <p><b>Hybrid Classical &amp; Quantum ML Financial Fraud Detection</b></p>
       <p>Financial anomaly detection platform combining a classical Random Forest engine (F1=84.04%) with Qiskit-simulated Quantum Kernel SVM modules.</p>
       <p><code>Python</code> <code>Qiskit</code> <code>Scikit-Learn</code> <code>FastAPI</code></p>
@@ -97,6 +106,7 @@ My work sits at the intersection of:
     </td>
     <td width="50%" valign="top">
       <h3>💊 <a href="https://github.com/ptanh05/Pharma_DNA_2025">Pharma DNA 2025</a></h3>
+      <p><img src="https://img.shields.io/badge/Sui%20Move-NFT%20Batch%20Traceability-EEF2FF?style=flat-square&color=4F46E5" alt="Sui Move" /></p>
       <p><b>Pharmaceutical Supply Chain Traceability on Sui</b></p>
       <p>End-to-end medicine traceability anchoring batch provenance from manufacturer to patient using Sui Move smart contracts and IPFS metadata.</p>
       <p><code>Sui Move</code> <code>Next.js 15</code> <code>PostgreSQL</code> <code>IPFS</code></p>
@@ -106,6 +116,7 @@ My work sits at the intersection of:
   <tr>
     <td width="50%" valign="top">
       <h3>📋 <a href="https://github.com/ptanh05/smart-fyp-management">Smart-FYP Management</a></h3>
+      <p><img src="https://img.shields.io/badge/Academic%20System-Contract%20Auth-EEF2FF?style=flat-square&color=4F46E5" alt="Academic System" /></p>
       <p><b>Academic Thesis &amp; Capstone Lifecycle Platform</b></p>
       <p>Full lifecycle system coordinating student capstone workflows, supervisor approval pipelines, and contract-verified authentication.</p>
       <p><code>Python</code> <code>TypeScript</code> <code>FastAPI</code> <code>PostgreSQL</code></p>
@@ -113,6 +124,7 @@ My work sits at the intersection of:
     </td>
     <td width="50%" valign="top">
       <h3>🌊 <a href="https://github.com/ptanh05/AI-Based-pH-Monitoring-and-Alert-System-for-Aquaculture-Ponds">AI Aquaculture Guardian</a></h3>
+      <p><img src="https://img.shields.io/badge/Edge%20AI-1.42ms%20P50%20Latency-EEF2FF?style=flat-square&color=4F46E5" alt="Edge AI" /></p>
       <p><b>Edge-Native Predictive Early-Warning System</b></p>
       <p>Decision-support system forecasting water quality degradation up to 150 minutes in advance with 1.42ms edge latency across 37,284 IoT readings.</p>
       <p><code>Python</code> <code>Edge AI</code> <code>IoT Forecasting</code> <code>Decision Support</code></p>
@@ -121,7 +133,9 @@ My work sits at the intersection of:
   </tr>
 </table>
 
----
+<div align="center">
+  <img src="./assets/divider.svg" alt="divider" width="100%" />
+</div>
 
 ### 🛠️ Tech Stack
 
@@ -155,21 +169,31 @@ My work sits at the intersection of:
   <code>Docker</code> &bull; <code>GitHub Actions</code> &bull; <code>Vercel</code> &bull; <code>Render</code> &bull; <code>Git</code>
 </p>
 
----
+<div align="center">
+  <img src="./assets/divider.svg" alt="divider" width="100%" />
+</div>
 
-### 📊 GitHub Telemetry
+### 📊 GitHub Activity &amp; Telemetry
 
 <div align="center">
   <img src="./assets/metrics.svg" alt="GitHub Activity and Metrics" width="100%" />
 </div>
 
+<br />
+
+<div align="center">
+  <img src="./assets/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake Animation" width="100%" />
+</div>
+
 <p align="center">
-  <sub><i>Metrics dynamically synchronized via GitHub Actions &bull; Last updated daily</i></sub>
+  <sub><i>Metrics &amp; contribution trail dynamically synchronized via GitHub Actions &bull; Updated daily</i></sub>
 </p>
 
----
+<div align="center">
+  <img src="./assets/divider.svg" alt="divider" width="100%" />
+</div>
 
-### 📬 Connect & Collaborate
+### 📬 Connect &amp; Collaborate
 
 Feel free to reach out for research discussions, engineering collaborations, or Web3 opportunities:
 
@@ -191,8 +215,7 @@ Feel free to reach out for research discussions, engineering collaborations, or 
   </a>
 </p>
 
----
-
 <div align="center">
+  <img src="./assets/footer.svg" alt="footer wave" width="100%" />
   <p>Designed for GitHub Light Mode &bull; Built by <b>Phùng Thế Anh</b> (@ptanh05)</p>
 </div>

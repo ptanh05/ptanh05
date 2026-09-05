@@ -1,4 +1,4 @@
-name: Update Dynamic Profile Metrics
+name: Update Dynamic Profile Metrics & Visuals
 
 on:
   schedule:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  refresh-metrics:
+  refresh-profile:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -29,14 +29,23 @@ jobs:
         run: |
           node scripts/generate-metrics.js
 
+      - name: Generate Snake Animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ptanh05
+          outputs: |
+            assets/github-contribution-grid-snake.svg?color_snake=#4f46e5&color_dots=#ebedf0,#9be9a8,#40c463,#30a14e,#216e39
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Commit & Push Changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/profile-data.json assets/metrics.svg
+          git add assets/
           if git diff --staged --quiet; then
-            echo "No telemetry changes detected. Skipping commit."
+            echo "No changes detected. Skipping commit."
           else
-            git commit -m "chore(profile): update dynamic metrics [skip ci]"
+            git commit -m "chore(profile): refresh telemetry & contribution snake [skip ci]"
             git push
           fi
