@@ -103,7 +103,7 @@
   <!-- ============================================== -->
   <!-- 1. BIRD FLYING ACROSS THE TOP SKY (chim bay ở trên) -->
   <!-- ============================================== -->
-  <g class="sky-bird" transform="translate(0, 28)">
+  <g class="sky-bird" transform="translate(0, 48)">
     <g transform="translate(0, 0)">
       <!-- Bird Body -->
       <ellipse cx="0" cy="0" rx="6" ry="4" fill="#38bdf8" />
