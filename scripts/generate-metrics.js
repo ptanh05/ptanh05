@@ -73,6 +73,9 @@ function generateMetricsSvg(data) {
       </g>`;
   }).join('\n      ');
 
+  const repoCount = user.public_repos || repos.length || 52;
+  const repoDisplay = repoCount >= 50 ? `${Math.floor(repoCount / 10) * 10}+` : `${repoCount}`;
+
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 165" width="100%" height="100%">
   <defs>
     <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -115,32 +118,28 @@ function generateMetricsSvg(data) {
     <g transform="translate(0, 0)">
       <rect x="0" y="0" width="102" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
       <text x="12" y="20" fill="#64748b" font-size="8.5" font-weight="600" class="font-sans">PUBLIC REPOS</text>
-      <text x="12" y="47" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${user.public_repos || repos.length}</text>
-      <text x="54" y="46" fill="#6366f1" font-size="9" font-weight="600" class="font-sans">repos</text>
+      <text x="12" y="47" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${repoDisplay}<tspan fill="#6366f1" font-size="9" font-weight="600" dx="4" dy="-2">repos</tspan></text>
     </g>
 
     <!-- Tile 2: Stars -->
     <g transform="translate(109, 0)">
       <rect x="0" y="0" width="102" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
       <text x="12" y="20" fill="#64748b" font-size="8.5" font-weight="600" class="font-sans">STARGAZERS</text>
-      <text x="12" y="47" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${stars}</text>
-      <text x="36" y="46" fill="#f59e0b" font-size="9" font-weight="600" class="font-sans">stars</text>
+      <text x="12" y="47" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${stars}<tspan fill="#f59e0b" font-size="9" font-weight="600" dx="4" dy="-2">stars</tspan></text>
     </g>
 
     <!-- Tile 3: Network -->
     <g transform="translate(218, 0)">
       <rect x="0" y="0" width="102" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
       <text x="12" y="20" fill="#64748b" font-size="8.5" font-weight="600" class="font-sans">FOLLOWERS</text>
-      <text x="12" y="47" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${user.followers || 0}</text>
-      <text x="36" y="46" fill="#10b981" font-size="9" font-weight="600" class="font-sans">peers</text>
+      <text x="12" y="47" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${user.followers || 0}<tspan fill="#10b981" font-size="9" font-weight="600" dx="4" dy="-2">peers</tspan></text>
     </g>
 
     <!-- Tile 4: Languages -->
     <g transform="translate(327, 0)">
       <rect x="0" y="0" width="102" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
       <text x="12" y="20" fill="#64748b" font-size="8.5" font-weight="600" class="font-sans">LANGUAGES</text>
-      <text x="12" y="47" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${Object.keys(languages).length}</text>
-      <text x="36" y="46" fill="#8b5cf6" font-size="9" font-weight="600" class="font-sans">stacks</text>
+      <text x="12" y="47" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${Object.keys(languages).length}<tspan fill="#8b5cf6" font-size="9" font-weight="600" dx="4" dy="-2">stacks</tspan></text>
     </g>
   </g>
 
