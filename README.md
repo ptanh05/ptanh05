@@ -182,11 +182,11 @@ My work sits at the intersection of:
 <br />
 
 <div align="center">
-  <img src="./assets/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake Animation" width="100%" />
+  <img src="./assets/github-contribution-grid-snake.svg" alt="GitHub Contribution Cute Pet Expedition" width="100%" />
 </div>
 
 <p align="center">
-  <sub><i>Metrics &amp; contribution trail dynamically synchronized via GitHub Actions &bull; Updated daily</i></sub>
+  <sub><i>1,390 Contributions &bull; Daily cute pet expedition 🐾 &bull; Updated daily</i></sub>
 </p>
 
 <div align="center">
