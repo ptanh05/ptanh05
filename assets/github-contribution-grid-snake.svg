@@ -103,15 +103,18 @@
   <!-- ============================================== -->
   <!-- 1. BIRD FLYING ACROSS THE TOP SKY (chim bay ở trên) -->
   <!-- ============================================== -->
-  <g class="sky-bird" transform="translate(0, 48)">
-    <g transform="translate(0, 0)">
+  <g transform="translate(0, 27)">
+    <g class="sky-bird">
       <!-- Bird Body -->
-      <ellipse cx="0" cy="0" rx="6" ry="4" fill="#38bdf8" />
-      <circle cx="4" cy="-1.5" r="3.2" fill="#38bdf8" />
+      <ellipse cx="0" cy="0" rx="6.5" ry="4.5" fill="#38bdf8" />
+      <circle cx="4.5" cy="-1.5" r="3.5" fill="#38bdf8" />
+      <!-- White Belly -->
+      <ellipse cx="0.5" cy="1.2" rx="4.5" ry="2.8" fill="#ffffff" />
       <!-- Beak -->
-      <polygon points="7,-1.5 10,-0.5 7,0.5" fill="#f97316" />
+      <polygon points="7.5,-1.5 11,-0.5 7.5,0.5" fill="#f97316" />
       <!-- Eye -->
-      <circle cx="5" cy="-2.2" r="0.8" fill="#0f172a" />
+      <circle cx="5.5" cy="-2.2" r="0.9" fill="#0f172a" />
+      <circle cx="5.8" cy="-2.5" r="0.4" fill="#ffffff" />
       <!-- Flapping Wings -->
       <g class="wing-flap-bird">
         <path d="M -1 -2 Q -3 -8 -8 -5 Q -4 -1 -1 -1 Z" fill="#0284c7" />
