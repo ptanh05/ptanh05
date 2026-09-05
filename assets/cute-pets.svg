@@ -7,115 +7,150 @@
       .s-l3 { fill: #30a14e; rx: 2px; }
       .s-l4 { fill: #216e39; rx: 2px; }
 
-      /* Individual wandering animations along the bottom */
-      @keyframes wander-cat {
-        0% { transform: translateX(0px); }
-        30% { transform: translateX(65px); }
-        55% { transform: translateX(20px); }
-        80% { transform: translateX(80px); }
-        100% { transform: translateX(0px); }
+      /* Flying bird across the top */
+      @keyframes bird-fly {
+        0% { transform: translateX(-40px) translateY(0px); }
+        50% { transform: translateX(410px) translateY(-5px); }
+        100% { transform: translateX(870px) translateY(0px); }
       }
-      @keyframes wander-shiba {
-        0% { transform: translateX(0px); }
-        25% { transform: translateX(-40px); }
-        60% { transform: translateX(50px); }
-        85% { transform: translateX(10px); }
-        100% { transform: translateX(0px); }
-      }
-      @keyframes wander-bunny {
-        0% { transform: translateX(0px); }
-        35% { transform: translateX(55px); }
-        50% { transform: translateX(30px); }
-        75% { transform: translateX(70px); }
-        100% { transform: translateX(0px); }
-      }
-      @keyframes wander-duck {
-        0% { transform: translateX(0px); }
-        28% { transform: translateX(-35px); }
-        58% { transform: translateX(45px); }
-        82% { transform: translateX(15px); }
-        100% { transform: translateX(0px); }
-      }
-      @keyframes wander-panda {
-        0% { transform: translateX(0px); }
-        32% { transform: translateX(50px); }
-        65% { transform: translateX(-30px); }
-        85% { transform: translateX(20px); }
-        100% { transform: translateX(0px); }
+      @keyframes bird-wing {
+        0%, 100% { transform: scaleY(1); }
+        50% { transform: scaleY(-0.7); }
       }
 
-      /* Cute bouncing micro-animations */
-      @keyframes cat-step {
-        0%, 100% { transform: translateY(0px) rotate(0deg); }
-        50% { transform: translateY(-4px) rotate(1.5deg); }
-      }
-      @keyframes shiba-trot {
-        0%, 100% { transform: translateY(-3px) rotate(-1.5deg); }
-        50% { transform: translateY(0px) rotate(1deg); }
-      }
-      @keyframes bunny-hop {
+      /* Dangling spider on silk thread */
+      @keyframes spider-drop {
         0%, 100% { transform: translateY(0px); }
-        40% { transform: translateY(-7px); }
-        60% { transform: translateY(-6px); }
-      }
-      @keyframes duck-waddle {
-        0%, 100% { transform: translateY(0px) rotate(-3deg); }
-        50% { transform: translateY(-3px) rotate(3deg); }
-      }
-      @keyframes panda-sway {
-        0%, 100% { transform: translateY(0px) rotate(-1.5deg); }
-        50% { transform: translateY(-3px) rotate(1.5deg); }
+        50% { transform: translateY(22px); }
       }
 
-      @keyframes tail-wag {
-        0%, 100% { transform: rotate(-18deg); }
-        50% { transform: rotate(18deg); }
+      /* Wandering animations for bottom animals */
+      @keyframes stroll-1 {
+        0%, 100% { transform: translateX(0px); }
+        50% { transform: translateX(35px); }
+      }
+      @keyframes stroll-2 {
+        0%, 100% { transform: translateX(0px); }
+        50% { transform: translateX(-30px); }
+      }
+      @keyframes stroll-slow {
+        0%, 100% { transform: translateX(0px); }
+        50% { transform: translateX(20px); }
+      }
+      @keyframes stroll-hop {
+        0%, 100% { transform: translateX(0px); }
+        35% { transform: translateX(25px); }
+        70% { transform: translateX(10px); }
+      }
+
+      /* Micro-bounces */
+      @keyframes hop-up {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
+      }
+      @keyframes waddle {
+        0%, 100% { transform: rotate(-3deg) translateY(0px); }
+        50% { transform: rotate(3deg) translateY(-2px); }
+      }
+      @keyframes bob {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-3px); }
       }
       @keyframes wing-flap {
         0%, 100% { transform: scaleY(1); }
         50% { transform: scaleY(0.65); }
       }
-      @keyframes float-spark {
-        0%, 100% { opacity: 0.25; transform: translateY(0px) scale(0.85); }
-        50% { opacity: 0.95; transform: translateY(-6px) scale(1.15); }
+      @keyframes float-sparkle {
+        0%, 100% { opacity: 0.3; transform: translateY(0px) scale(0.85); }
+        50% { opacity: 1; transform: translateY(-5px) scale(1.15); }
       }
 
-      .zone-cat { animation: wander-cat 14s ease-in-out infinite; }
-      .zone-shiba { animation: wander-shiba 15s ease-in-out infinite; }
-      .zone-bunny { animation: wander-bunny 12s ease-in-out infinite; }
-      .zone-duck { animation: wander-duck 13s ease-in-out infinite; }
-      .zone-panda { animation: wander-panda 16s ease-in-out infinite; }
+      .sky-bird { animation: bird-fly 14s linear infinite; }
+      .wing-flap-bird { transform-origin: top center; animation: bird-wing 0.25s infinite alternate ease-in-out; }
 
-      .body-cat { animation: cat-step 0.6s infinite ease-in-out; }
-      .body-shiba { animation: shiba-trot 0.65s infinite ease-in-out; }
-      .body-bunny { animation: bunny-hop 0.5s infinite ease-in-out; }
-      .body-duck { animation: duck-waddle 0.45s infinite ease-in-out; }
-      .body-panda { animation: panda-sway 0.8s infinite ease-in-out; }
+      .dangle-spider { animation: spider-drop 5s ease-in-out infinite; }
 
-      .wag-tail {
-        transform-origin: bottom left;
-        animation: tail-wag 0.3s infinite alternate ease-in-out;
-      }
-      .flap-wing {
-        transform-origin: top left;
-        animation: wing-flap 0.22s infinite alternate ease-in-out;
-      }
-      .sparkle {
-        animation: float-spark 2s infinite ease-in-out;
-      }
+      .zone-cat { animation: stroll-1 9s ease-in-out infinite; }
+      .zone-turtle { animation: stroll-slow 16s ease-in-out infinite; }
+      .zone-shiba { animation: stroll-2 10s ease-in-out infinite; }
+      .zone-frog { animation: stroll-hop 8s ease-in-out infinite; }
+      .zone-bunny { animation: stroll-1 8.5s ease-in-out infinite; }
+      .zone-duck { animation: stroll-2 9.5s ease-in-out infinite; }
+      .zone-penguin { animation: stroll-1 11s ease-in-out infinite; }
+      .zone-panda { animation: stroll-2 12s ease-in-out infinite; }
+
+      .anim-hop { animation: hop-up 0.5s ease-in-out infinite; }
+      .anim-waddle { animation: waddle 0.5s ease-in-out infinite; }
+      .anim-bob { animation: bob 0.65s ease-in-out infinite; }
+      .anim-duck-wing { transform-origin: top left; animation: wing-flap 0.25s infinite alternate; }
+      .sparkle { animation: float-sparkle 2s infinite ease-in-out; }
+
       .font-sans {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       }
     </style>
   </defs>
 
-  <!-- Background Container -->
+  <!-- Container Box -->
   <rect width="850" height="165" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2" />
 
-  <!-- Header -->
+  <!-- Header Title -->
   <g transform="translate(24, 20)">
     <circle cx="4" cy="-2" r="3.5" fill="#10b981" />
-    <text x="16" y="2" fill="#0f172a" font-size="11" font-weight="700" class="font-sans">1,390 CONTRIBUTIONS IN THE LAST YEAR • CUTE PET EXPEDITION 🐾</text>
+    <text x="16" y="2" fill="#0f172a" font-size="11" font-weight="700" class="font-sans">1,390 CONTRIBUTIONS IN THE LAST YEAR • CUTE PET GARDEN 🐾</text>
+  </g>
+
+  <!-- ============================================== -->
+  <!-- 1. BIRD FLYING ACROSS THE TOP SKY (chim bay ở trên) -->
+  <!-- ============================================== -->
+  <g class="sky-bird" transform="translate(0, 15)">
+    <g transform="translate(0, 0)">
+      <!-- Bird Body -->
+      <ellipse cx="0" cy="0" rx="6" ry="4" fill="#38bdf8" />
+      <circle cx="4" cy="-1.5" r="3.2" fill="#38bdf8" />
+      <!-- Beak -->
+      <polygon points="7,-1.5 10,-0.5 7,0.5" fill="#f97316" />
+      <!-- Eye -->
+      <circle cx="5" cy="-2.2" r="0.8" fill="#0f172a" />
+      <!-- Flapping Wings -->
+      <g class="wing-flap-bird">
+        <path d="M -1 -2 Q -3 -8 -8 -5 Q -4 -1 -1 -1 Z" fill="#0284c7" />
+      </g>
+    </g>
+  </g>
+
+  <!-- ============================================== -->
+  <!-- 2. SPIDER DANGLING FROM TOP RIGHT (nhện đu tơ) -->
+  <!-- ============================================== -->
+  <g transform="translate(800, 0)">
+    <g class="dangle-spider">
+      <!-- Silk Thread -->
+      <line x1="0" y1="0" x2="0" y2="28" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2,2" />
+      <!-- Spider Group -->
+      <g transform="translate(0, 28)">
+        <!-- 8 Legs -->
+        <path d="M -2 0 Q -7 -4 -10 -2" stroke="#334155" stroke-width="1.2" fill="none" stroke-linecap="round" />
+        <path d="M -2 1 Q -8 0 -11 3" stroke="#334155" stroke-width="1.2" fill="none" stroke-linecap="round" />
+        <path d="M -2 3 Q -7 5 -9 8" stroke="#334155" stroke-width="1.2" fill="none" stroke-linecap="round" />
+        <path d="M -2 4 Q -5 8 -7 11" stroke="#334155" stroke-width="1.2" fill="none" stroke-linecap="round" />
+
+        <path d="M 2 0 Q 7 -4 10 -2" stroke="#334155" stroke-width="1.2" fill="none" stroke-linecap="round" />
+        <path d="M 2 1 Q 8 0 11 3" stroke="#334155" stroke-width="1.2" fill="none" stroke-linecap="round" />
+        <path d="M 2 3 Q 7 5 9 8" stroke="#334155" stroke-width="1.2" fill="none" stroke-linecap="round" />
+        <path d="M 2 4 Q 5 8 7 11" stroke="#334155" stroke-width="1.2" fill="none" stroke-linecap="round" />
+
+        <!-- Chubby Spider Body -->
+        <ellipse cx="0" cy="2" rx="5" ry="4.5" fill="#1e293b" />
+        <!-- Eyes -->
+        <circle cx="-1.6" cy="1" r="1.1" fill="#ffffff" />
+        <circle cx="1.6" cy="1" r="1.1" fill="#ffffff" />
+        <circle cx="-1.6" cy="1" r="0.6" fill="#0f172a" />
+        <circle cx="1.6" cy="1" r="0.6" fill="#0f172a" />
+        <!-- Cute Blush -->
+        <circle cx="-3.2" cy="3.5" r="0.9" fill="#f43f5e" opacity="0.8" />
+        <circle cx="3.2" cy="3.5" r="0.9" fill="#f43f5e" opacity="0.8" />
+      </g>
+    </g>
   </g>
 
   <!-- Contribution Grid (52 Columns x 7 Rows) -->
@@ -174,153 +209,209 @@
     <g transform="translate(714,0)"><rect y="0" width="11" height="11" class="s-l2"/><rect y="13" width="11" height="11" class="s-l1"/><rect y="26" width="11" height="11" class="s-bg"/><rect y="39" width="11" height="11" class="s-bg"/><rect y="52" width="11" height="11" class="s-bg"/><rect y="65" width="11" height="11" class="s-bg"/></g>
   </g>
 
-  <!-- Ground Path along the Bottom (y = 122 - 156) -->
-  <!-- Cute little ground dots / flowers -->
+  <!-- Ground Path along the Bottom (y = 126 - 156) -->
   <g opacity="0.6">
-    <circle cx="95" cy="150" r="1.5" fill="#a7f3d0" />
-    <circle cx="230" cy="148" r="1.5" fill="#fde68a" />
-    <circle cx="370" cy="151" r="1.5" fill="#fbcfe8" />
-    <circle cx="510" cy="149" r="1.5" fill="#bae6fd" />
-    <circle cx="650" cy="150" r="1.5" fill="#fed7aa" />
+    <circle cx="80" cy="152" r="1.5" fill="#a7f3d0" />
+    <circle cx="170" cy="150" r="1.5" fill="#fde68a" />
+    <circle cx="270" cy="151" r="1.5" fill="#fbcfe8" />
+    <circle cx="360" cy="150" r="1.5" fill="#bae6fd" />
+    <circle cx="460" cy="152" r="1.5" fill="#fed7aa" />
+    <circle cx="560" cy="150" r="1.5" fill="#a7f3d0" />
+    <circle cx="650" cy="151" r="1.5" fill="#fde68a" />
+    <circle cx="730" cy="150" r="1.5" fill="#fbcfe8" />
   </g>
 
   <!-- ============================================== -->
-  <!-- 5 SEPARATE CUTE ANIMALS WANDERING AT THE BOTTOM -->
+  <!-- ANIMALS WANDERING AT THE BOTTOM (TAILS REMOVED, SPACED OUT) -->
   <!-- ============================================== -->
 
-  <!-- 1. Cat (Roaming on the bottom left: x ~ 40 to 140, y = 124) -->
-  <g transform="translate(45, 126)">
+  <!-- 1. Cat (No Tail, Bottom Left: x ~ 40) -->
+  <g transform="translate(45, 127)">
     <g class="zone-cat">
-      <!-- Sparkle above cat -->
-      <path class="sparkle" d="M 10 -6 Q 10 -10 13 -10 Q 10 -10 10 -14 Q 10 -10 7 -10 Q 10 -10 10 -6" fill="#f59e0b" />
-      <g class="body-cat">
-        <!-- Wagging tail -->
-        <path class="wag-tail" d="M -9 8 Q -19 4 -14 -4" fill="none" stroke="#f97316" stroke-width="3" stroke-linecap="round" />
+      <g class="anim-bob">
         <!-- Body -->
-        <rect x="-8" y="2" width="23" height="19" rx="9" fill="#ffffff" stroke="#fed7aa" stroke-width="2" />
+        <rect x="-8" y="2" width="22" height="18" rx="9" fill="#ffffff" stroke="#fed7aa" stroke-width="2" />
         <!-- Calico patch -->
-        <path d="M 6 2 Q 13 2 13 9 L 13 4 Z" fill="#f97316" />
+        <path d="M 5 2 Q 12 2 12 9 L 12 4 Z" fill="#f97316" />
         <!-- Ears -->
         <polygon points="-8,4 -4,-5 1,4" fill="#f97316" />
         <polygon points="1,4 6,-5 11,4" fill="#fed7aa" />
         <polygon points="2,4 5,-2 9,4" fill="#fbcfe8" />
         <!-- Face -->
-        <circle cx="-2" cy="9" r="1.7" fill="#0f172a" />
-        <circle cx="5" cy="9" r="1.7" fill="#0f172a" />
-        <circle cx="-1.5" cy="8.2" r="0.5" fill="#ffffff" />
-        <circle cx="5.5" cy="8.2" r="0.5" fill="#ffffff" />
-        <polygon points="1.5,12 0,13.5 3,13.5" fill="#f43f5e" />
+        <circle cx="-2" cy="8.5" r="1.7" fill="#0f172a" />
+        <circle cx="5" cy="8.5" r="1.7" fill="#0f172a" />
+        <circle cx="-1.5" cy="7.7" r="0.5" fill="#ffffff" />
+        <circle cx="5.5" cy="7.7" r="0.5" fill="#ffffff" />
+        <polygon points="1.5,11.5 0,13 3,13" fill="#f43f5e" />
         <!-- Cheeks -->
-        <circle cx="-5.5" cy="12" r="2" fill="#f472b6" opacity="0.6" />
-        <circle cx="8.5" cy="12" r="2" fill="#f472b6" opacity="0.6" />
+        <circle cx="-5.5" cy="11.5" r="1.8" fill="#f472b6" opacity="0.6" />
+        <circle cx="8.5" cy="11.5" r="1.8" fill="#f472b6" opacity="0.6" />
         <!-- Paws -->
-        <circle cx="-4" cy="21" r="2.8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.3" />
-        <circle cx="7" cy="21" r="2.8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.3" />
+        <circle cx="-4" cy="20" r="2.8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.3" />
+        <circle cx="7" cy="20" r="2.8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.3" />
       </g>
     </g>
   </g>
 
-  <!-- 2. Shiba Inu / Puppy (Roaming left-center: x ~ 180 to 280, y = 125) -->
-  <g transform="translate(195, 126)">
+  <!-- 2. Turtle (Rùa, Bottom: x ~ 135) -->
+  <g transform="translate(135, 131)">
+    <g class="zone-turtle">
+      <g class="anim-bob">
+        <!-- 4 Feet -->
+        <circle cx="-8" cy="12" r="2.5" fill="#4ade80" />
+        <circle cx="8" cy="12" r="2.5" fill="#4ade80" />
+        <!-- Head -->
+        <circle cx="12" cy="4" r="3.2" fill="#4ade80" />
+        <circle cx="13" cy="3" r="0.8" fill="#0f172a" />
+        <!-- Shell Dome -->
+        <path d="M -10 10 Q -10 -2 0 -2 Q 10 -2 10 10 Z" fill="#15803d" stroke="#166534" stroke-width="1.2" />
+        <!-- Shell Segments -->
+        <path d="M -5 5 L 0 1 L 5 5 L 3 10 L -3 10 Z" fill="#22c55e" opacity="0.9" />
+        <circle cx="0" cy="5.5" r="1.5" fill="#86efac" />
+      </g>
+    </g>
+  </g>
+
+  <!-- 3. Shiba Inu / Puppy (No Tail, Bottom: x ~ 230) -->
+  <g transform="translate(230, 127)">
     <g class="zone-shiba">
-      <!-- Heart above puppy -->
-      <path class="sparkle" d="M 8 -4 Q 8 -7 5 -7 Q 2 -7 2 -4 Q 2 -1 5 2 L 5 2 Q 8 -1 8 -4 Z" fill="#f43f5e" opacity="0.8" />
-      <g class="body-shiba">
-        <!-- Wagging Tail -->
-        <path class="wag-tail" d="M -9 8 Q -16 0 -11 -6" fill="none" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" />
+      <g class="anim-bob">
         <!-- Body -->
-        <rect x="-8" y="2" width="22" height="19" rx="9" fill="#f59e0b" />
-        <rect x="-3" y="7" width="14" height="12" rx="6" fill="#ffffff" />
+        <rect x="-8" y="2" width="22" height="18" rx="9" fill="#f59e0b" />
+        <rect x="-3" y="7" width="13" height="11" rx="5.5" fill="#ffffff" />
         <!-- Ears -->
         <polygon points="-7,4 -3,-3 1,4" fill="#d97706" />
         <polygon points="3,4 7,-3 11,4" fill="#d97706" />
-        <!-- Happy closed eyes -->
-        <path d="M -2 8.5 Q 0 6.5 2 8.5" fill="none" stroke="#1e293b" stroke-width="1.4" stroke-linecap="round" />
-        <path d="M 5 8.5 Q 7 6.5 9 8.5" fill="none" stroke="#1e293b" stroke-width="1.4" stroke-linecap="round" />
-        <ellipse cx="3.5" cy="11.5" rx="1.6" ry="1.1" fill="#0f172a" />
-        <path d="M 3.5 13 Q 3.5 15.5 5.5 15.5 Q 7 13 3.5 13" fill="#f43f5e" />
+        <!-- Happy Eyes -->
+        <path d="M -2 8 Q 0 6 2 8" fill="none" stroke="#1e293b" stroke-width="1.4" stroke-linecap="round" />
+        <path d="M 5 8 Q 7 6 9 8" fill="none" stroke="#1e293b" stroke-width="1.4" stroke-linecap="round" />
+        <ellipse cx="3.5" cy="11" rx="1.5" ry="1" fill="#0f172a" />
+        <path d="M 3.5 12.5 Q 3.5 15 5.5 15 Q 7 12.5 3.5 12.5" fill="#f43f5e" />
         <!-- Paws -->
-        <circle cx="-3" cy="21" r="2.8" fill="#ffffff" />
-        <circle cx="6" cy="21" r="2.8" fill="#ffffff" />
+        <circle cx="-3" cy="20" r="2.8" fill="#ffffff" />
+        <circle cx="6" cy="20" r="2.8" fill="#ffffff" />
       </g>
     </g>
   </g>
 
-  <!-- 3. Bunny (Roaming middle: x ~ 340 to 440, y = 126) -->
-  <g transform="translate(350, 126)">
-    <g class="zone-bunny">
-      <!-- Stars above bunny -->
-      <circle class="sparkle" cx="2" cy="-9" r="2" fill="#ec4899" />
-      <g class="body-bunny">
-        <!-- Long Ears -->
-        <rect x="-5.5" y="-12" width="4.5" height="14" rx="2.2" fill="#ffffff" stroke="#f472b6" stroke-width="1" />
-        <rect x="2" y="-12" width="4.5" height="14" rx="2.2" fill="#ffffff" stroke="#f472b6" stroke-width="1" />
-        <rect x="-4.2" y="-10" width="2" height="9" rx="1" fill="#fbcfe8" />
-        <rect x="3.2" y="-10" width="2" height="9" rx="1" fill="#fbcfe8" />
-        <!-- Round Body -->
-        <circle cx="0.5" cy="9" r="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4" />
-        <!-- Fluffy Tail -->
-        <circle cx="-9.5" cy="10" r="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
-        <!-- Cute Eyes -->
-        <circle cx="-2.5" cy="7.5" r="1.4" fill="#f43f5e" />
-        <circle cx="3.5" cy="7.5" r="1.4" fill="#f43f5e" />
-        <polygon points="0.5,10 -0.8,11.8 1.8,11.8" fill="#fb7185" />
-        <circle cx="-5" cy="11" r="1.7" fill="#fbcfe8" />
-        <circle cx="6" cy="11" r="1.7" fill="#fbcfe8" />
-        <!-- Tiny Paws -->
-        <ellipse cx="-2.5" cy="18.5" rx="2.5" ry="1.8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
-        <ellipse cx="3.5" cy="18.5" rx="2.5" ry="1.8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
-      </g>
-    </g>
-  </g>
-
-  <!-- 4. Duckling (Roaming right-center: x ~ 490 to 590, y = 126) -->
-  <g transform="translate(500, 126)">
-    <g class="zone-duck">
-      <!-- Music note sparkle -->
-      <path class="sparkle" d="M 8 -7 L 8 -1 L 11 -2 L 11 -8 Z" fill="#38bdf8" />
-      <circle class="sparkle" cx="7" cy="-1" r="1.5" fill="#38bdf8" />
-      <g class="body-duck">
-        <!-- Wing -->
-        <path class="flap-wing" d="M -4 6 Q -10 3 -3 0 Z" fill="#eab308" />
-        <!-- Chubby Body -->
-        <circle cx="0" cy="6" r="9.5" fill="#facc15" />
-        <!-- Beak -->
-        <polygon points="6,4 13,7 6,10" fill="#f97316" />
-        <!-- Eye -->
-        <circle cx="3.5" cy="3.5" r="1.6" fill="#0f172a" />
-        <circle cx="4.1" cy="2.9" r="0.6" fill="#ffffff" />
+  <!-- 4. Frog (Ếch xanh, Bottom: x ~ 325) -->
+  <g transform="translate(325, 131)">
+    <g class="zone-frog">
+      <g class="anim-hop">
+        <!-- Big Round Eyes on top -->
+        <circle cx="-5" cy="0" r="3.2" fill="#22c55e" />
+        <circle cx="5" cy="0" r="3.2" fill="#22c55e" />
+        <circle cx="-5" cy="0" r="1.5" fill="#0f172a" />
+        <circle cx="5" cy="0" r="1.5" fill="#0f172a" />
+        <circle cx="-4.5" cy="-0.5" r="0.6" fill="#ffffff" />
+        <circle cx="5.5" cy="-0.5" r="0.6" fill="#ffffff" />
+        <!-- Chubby Green Body -->
+        <ellipse cx="0" cy="7" rx="9" ry="7.5" fill="#22c55e" />
+        <!-- Light Belly -->
+        <ellipse cx="0" cy="8.5" rx="5.5" ry="4.5" fill="#bbf7d0" />
+        <!-- Cute Smile -->
+        <path d="M -3 6 Q 0 8 3 6" fill="none" stroke="#15803d" stroke-width="1.2" stroke-linecap="round" />
+        <!-- Blushing Cheeks -->
+        <circle cx="-6.5" cy="6.5" r="1.5" fill="#f472b6" opacity="0.65" />
+        <circle cx="6.5" cy="6.5" r="1.5" fill="#f472b6" opacity="0.65" />
         <!-- Feet -->
-        <ellipse cx="-2" cy="15.5" rx="2.8" ry="1.4" fill="#ea580c" />
-        <ellipse cx="3" cy="15.5" rx="2.8" ry="1.4" fill="#ea580c" />
+        <circle cx="-7" cy="14" r="2" fill="#16a34a" />
+        <circle cx="7" cy="14" r="2" fill="#16a34a" />
       </g>
     </g>
   </g>
 
-  <!-- 5. Baby Panda (Roaming far-right: x ~ 630 to 730, y = 126) -->
-  <g transform="translate(645, 126)">
-    <g class="zone-panda">
-      <!-- Sparkle above panda -->
-      <path class="sparkle" d="M 6 -5 Q 6 -8 9 -8 Q 6 -8 6 -11 Q 6 -8 3 -8 Q 6 -8 6 -5" fill="#10b981" />
-      <g class="body-panda">
-        <!-- Ears -->
-        <circle cx="-6.5" cy="0" r="3.5" fill="#1e293b" />
-        <circle cx="6.5" cy="0" r="3.5" fill="#1e293b" />
-        <!-- Body -->
-        <circle cx="0" cy="9.5" r="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" />
-        <!-- Eye Patches -->
-        <ellipse cx="-3.8" cy="7.5" rx="2.6" ry="2" fill="#1e293b" transform="rotate(-15 -3.8 7.5)" />
-        <ellipse cx="3.8" cy="7.5" rx="2.6" ry="2" fill="#1e293b" transform="rotate(15 3.8 7.5)" />
-        <circle cx="-3.8" cy="7.5" r="0.8" fill="#ffffff" />
-        <circle cx="3.8" cy="7.5" r="0.8" fill="#ffffff" />
-        <!-- Nose -->
-        <ellipse cx="0" cy="11.8" rx="1.5" ry="1" fill="#0f172a" />
-        <!-- Cheeks -->
-        <circle cx="-6" cy="11" r="1.5" fill="#fbcfe8" />
-        <circle cx="6" cy="11" r="1.5" fill="#fbcfe8" />
+  <!-- 5. Bunny (No Tail, Bottom: x ~ 415) -->
+  <g transform="translate(415, 127)">
+    <g class="zone-bunny">
+      <g class="anim-hop">
+        <!-- Long Ears -->
+        <rect x="-5" y="-12" width="4" height="13" rx="2" fill="#ffffff" stroke="#f472b6" stroke-width="1" />
+        <rect x="2" y="-12" width="4" height="13" rx="2" fill="#ffffff" stroke="#f472b6" stroke-width="1" />
+        <rect x="-3.8" y="-10" width="1.8" height="8.5" rx="0.9" fill="#fbcfe8" />
+        <rect x="3.2" y="-10" width="1.8" height="8.5" rx="0.9" fill="#fbcfe8" />
+        <!-- Round Body -->
+        <circle cx="0.5" cy="8.5" r="9.5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.3" />
+        <!-- Eyes & Nose -->
+        <circle cx="-2.5" cy="7" r="1.3" fill="#f43f5e" />
+        <circle cx="3.5" cy="7" r="1.3" fill="#f43f5e" />
+        <polygon points="0.5,9.5 -0.6,11 1.6,11" fill="#fb7185" />
+        <circle cx="-5" cy="10.5" r="1.5" fill="#fbcfe8" />
+        <circle cx="6" cy="10.5" r="1.5" fill="#fbcfe8" />
         <!-- Paws -->
-        <circle cx="-6.5" cy="17" r="2.8" fill="#1e293b" />
-        <circle cx="6.5" cy="17" r="2.8" fill="#1e293b" />
+        <ellipse cx="-2.5" cy="17.5" rx="2.4" ry="1.6" fill="#ffffff" stroke="#e2e8f0" stroke-width="0.9" />
+        <ellipse cx="3.5" cy="17.5" rx="2.4" ry="1.6" fill="#ffffff" stroke="#e2e8f0" stroke-width="0.9" />
+      </g>
+    </g>
+  </g>
+
+  <!-- 6. Duckling (Bottom: x ~ 505) -->
+  <g transform="translate(505, 127)">
+    <g class="zone-duck">
+      <g class="anim-waddle">
+        <!-- Wing -->
+        <path class="anim-duck-wing" d="M -4 5 Q -9 2 -3 0 Z" fill="#eab308" />
+        <!-- Chubby Body -->
+        <circle cx="0" cy="5.5" r="9" fill="#facc15" />
+        <!-- Beak -->
+        <polygon points="5.5,3.5 12,6.5 5.5,9.5" fill="#f97316" />
+        <!-- Eye -->
+        <circle cx="3.2" cy="3" r="1.5" fill="#0f172a" />
+        <circle cx="3.7" cy="2.5" r="0.5" fill="#ffffff" />
+        <!-- Feet -->
+        <ellipse cx="-2" cy="14.5" rx="2.5" ry="1.3" fill="#ea580c" />
+        <ellipse cx="3" cy="14.5" rx="2.5" ry="1.3" fill="#ea580c" />
+      </g>
+    </g>
+  </g>
+
+  <!-- 7. Penguin (Chim cánh cụt, Bottom: x ~ 595) -->
+  <g transform="translate(595, 127)">
+    <g class="zone-penguin">
+      <g class="anim-waddle">
+        <!-- Flippers -->
+        <path d="M -7 5 Q -10 10 -8 13 Q -6 9 -6 6 Z" fill="#1e293b" />
+        <path d="M 7 5 Q 10 10 8 13 Q 6 9 6 6 Z" fill="#1e293b" />
+        <!-- Body -->
+        <ellipse cx="0" cy="7" rx="8" ry="10" fill="#1e293b" />
+        <!-- White Belly -->
+        <ellipse cx="0" cy="8.5" rx="5.5" ry="7.5" fill="#ffffff" />
+        <!-- Eyes -->
+        <circle cx="-2.5" cy="3" r="1.3" fill="#0f172a" />
+        <circle cx="2.5" cy="3" r="1.3" fill="#0f172a" />
+        <circle cx="-2.2" cy="2.6" r="0.4" fill="#ffffff" />
+        <circle cx="2.8" cy="2.6" r="0.4" fill="#ffffff" />
+        <!-- Beak -->
+        <polygon points="-1.5,5 1.5,5 0,7.5" fill="#f97316" />
+        <!-- Feet -->
+        <ellipse cx="-3.5" cy="17" rx="2.5" ry="1.3" fill="#f97316" />
+        <ellipse cx="3.5" cy="17" rx="2.5" ry="1.3" fill="#f97316" />
+      </g>
+    </g>
+  </g>
+
+  <!-- 8. Baby Panda (Bottom Far-Right: x ~ 685) -->
+  <g transform="translate(685, 127)">
+    <g class="zone-panda">
+      <g class="anim-bob">
+        <!-- Ears -->
+        <circle cx="-6" cy="0" r="3.2" fill="#1e293b" />
+        <circle cx="6" cy="0" r="3.2" fill="#1e293b" />
+        <!-- Body -->
+        <circle cx="0" cy="9" r="9.5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" />
+        <!-- Eye Patches -->
+        <ellipse cx="-3.5" cy="7" rx="2.4" ry="1.8" fill="#1e293b" transform="rotate(-15 -3.5 7)" />
+        <ellipse cx="3.5" cy="7" rx="2.4" ry="1.8" fill="#1e293b" transform="rotate(15 3.5 7)" />
+        <circle cx="-3.5" cy="7" r="0.7" fill="#ffffff" />
+        <circle cx="3.5" cy="7" r="0.7" fill="#ffffff" />
+        <!-- Nose -->
+        <ellipse cx="0" cy="11" rx="1.4" ry="0.9" fill="#0f172a" />
+        <!-- Cheeks -->
+        <circle cx="-5.5" cy="10.5" r="1.4" fill="#fbcfe8" />
+        <circle cx="5.5" cy="10.5" r="1.4" fill="#fbcfe8" />
+        <!-- Paws -->
+        <circle cx="-6" cy="16.5" r="2.6" fill="#1e293b" />
+        <circle cx="6" cy="16.5" r="2.6" fill="#1e293b" />
       </g>
     </g>
   </g>
