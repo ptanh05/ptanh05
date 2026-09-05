@@ -1,0 +1,23 @@
+{
+  "username": "ptanh05",
+  "generatedAt": "2026-09-05",
+  "user": {
+    "login": "ptanh05",
+    "node_id": "U_kgDOCNW0RQ",
+    "public_repos": 52,
+    "followers": 1,
+    "following": 9
+  },
+  "stars": 1,
+  "forks": 0,
+  "languages": {
+    "TypeScript": 23,
+    "Python": 9,
+    "C#": 2,
+    "Vue": 1,
+    "HTML": 2,
+    "CSS": 2,
+    "JavaScript": 1,
+    "Move": 1
+  }
+}
