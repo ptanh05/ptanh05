@@ -11,13 +11,13 @@
   "stars": 1,
   "forks": 0,
   "languages": {
+    "JavaScript": 2,
     "TypeScript": 23,
     "Python": 9,
     "C#": 2,
     "Vue": 1,
     "HTML": 2,
     "CSS": 2,
-    "JavaScript": 1,
     "Move": 1
   }
 }

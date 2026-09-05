@@ -2,9 +2,9 @@
  * scripts/generate-metrics.js
  * 
  * Dynamic telemetry engine for @ptanh05 GitHub profile.
- * Fetches real metrics via GitHub REST API and generates:
+ * Generates light-mode, modern assets:
  *  - assets/profile-data.json (raw telemetry payload)
- *  - assets/metrics.svg (scientific SVG telemetry card)
+ *  - assets/metrics.svg (light-mode SVG telemetry card)
  */
 
 const fs = require('fs');
@@ -37,115 +37,113 @@ function generateMetricsSvg(data) {
     .slice(0, 5);
   const totalLangCount = sortedLangs.reduce((acc, [, c]) => acc + c, 0) || 1;
 
-  // Language color mapping
+  // Modern language colors
   const langColors = {
     'TypeScript': '#3178c6',
     'Python': '#3572A5',
-    'Move': '#c084fc',
+    'Move': '#8b5cf6',
     'C#': '#178600',
-    'JavaScript': '#f1e05a',
+    'JavaScript': '#f7df1e',
     'Vue': '#41b883',
     'HTML': '#e34c26',
     'CSS': '#563d7c',
   };
 
-  // Build language bars
+  // Build progress bar segments
   let langOffsets = 0;
   const langSegments = sortedLangs.map(([lang, count]) => {
     const pct = (count / totalLangCount) * 100;
     const width = ((pct / 100) * 400).toFixed(1);
-    const color = langColors[lang] || '#38bdf8';
+    const color = langColors[lang] || '#6366f1';
     const x = langOffsets;
     langOffsets += parseFloat(width);
     return `<rect x="${x.toFixed(1)}" y="0" width="${width}" height="8" rx="2" fill="${color}" />`;
   }).join('\n        ');
 
+  // Build legend
   const langLegend = sortedLangs.map(([lang, count], idx) => {
     const pct = Math.round((count / totalLangCount) * 100);
-    const color = langColors[lang] || '#38bdf8';
-    const xPos = idx * 82;
+    const color = langColors[lang] || '#6366f1';
+    const xPos = idx * 80;
     return `
       <g transform="translate(${xPos}, 0)">
         <circle cx="4" cy="5" r="3.5" fill="${color}" />
-        <text x="12" y="8" fill="#cbd5e1" font-size="9" class="mono">${lang}</text>
-        <text x="12" y="19" fill="#64748b" font-size="8.5" class="mono">${pct}%</text>
+        <text x="12" y="8" fill="#334155" font-size="9" font-weight="600" class="font-sans">${lang}</text>
+        <text x="12" y="19" fill="#94a3b8" font-size="8.5" class="font-sans">${pct}%</text>
       </g>`;
   }).join('\n      ');
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 180" width="100%" height="100%">
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 165" width="100%" height="100%">
   <defs>
-    <linearGradient id="metric-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080c14" />
-      <stop offset="100%" stop-color="#0d1322" />
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
     </linearGradient>
 
-    <linearGradient id="stat-tile" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#111827" />
-      <stop offset="100%" stop-color="#0b0f19" />
+    <linearGradient id="top-bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#06b6d4" />
     </linearGradient>
-
-    <pattern id="m-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.5" />
-    </pattern>
 
     <style>
-      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
-      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
       @keyframes pulse {
-        0%, 100% { opacity: 0.9; }
-        50% { opacity: 0.3; }
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(0.9); }
       }
-      .live-sig { animation: pulse 2s infinite ease-in-out; }
+      .live-dot { animation: pulse 2s infinite ease-in-out; transform-origin: center; }
     </style>
   </defs>
 
-  <!-- Background Plate -->
-  <rect width="920" height="180" rx="8" fill="url(#metric-bg)" stroke="#1e293b" stroke-width="1.2" />
-  <rect width="920" height="180" rx="8" fill="url(#m-grid)" />
+  <!-- Container Box -->
+  <rect width="920" height="165" rx="10" fill="url(#card-bg)" stroke="#e2e8f0" stroke-width="1.2" />
+  <path d="M 0 10 C 0 4.48 4.48 0 10 0 L 910 0 C 915.52 0 920 4.48 920 10 L 920 3 L 0 3 Z" fill="url(#top-bar)" />
 
-  <!-- Top Metadata Bar -->
-  <g transform="translate(24, 22)">
-    <circle class="live-sig" cx="4" cy="4" r="3.5" fill="#38bdf8" />
-    <text x="14" y="7" fill="#38bdf8" font-size="10" font-weight="700" class="mono" letter-spacing="1.2">SYSTEM TELEMETRY // LIVE GITHUB AUDIT</text>
-    <text x="735" y="7" fill="#64748b" font-size="9" class="mono">LAST SYNC: ${generatedAt}</text>
+  <!-- Header Row -->
+  <g transform="translate(24, 20)">
+    <circle class="live-dot" cx="4" cy="4" r="3.5" fill="#10b981" />
+    <text x="14" y="8" fill="#0f172a" font-size="11" font-weight="700" class="font-sans">GITHUB ACTIVITY &amp; ECOSYSTEM METRICS</text>
+    <text x="740" y="8" fill="#64748b" font-size="9.5" class="font-mono">LAST SYNC: ${generatedAt}</text>
   </g>
-  <line x1="24" y1="36" x2="896" y2="36" stroke="#1e293b" stroke-width="0.8" />
+  <line x1="24" y1="36" x2="896" y2="36" stroke="#f1f5f9" stroke-width="1.2" />
 
-  <!-- 4 Primary Metric HUD Tiles -->
+  <!-- 4 Stat Tiles -->
   <g transform="translate(24, 48)">
     <!-- Tile 1: Repos -->
-    <rect x="0" y="0" width="100" height="66" rx="4" fill="url(#stat-tile)" stroke="#1e293b" stroke-width="1" />
-    <text x="10" y="18" fill="#64748b" font-size="8.5" font-weight="600" class="mono">PUBLIC REPOS</text>
-    <text x="10" y="47" fill="#f8fafc" font-size="22" font-weight="800" class="sans">${user.public_repos || repos.length}</text>
-    <text x="52" y="46" fill="#38bdf8" font-size="9" class="mono">nodes</text>
+    <rect x="0" y="0" width="100" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+    <text x="10" y="18" fill="#64748b" font-size="8.5" font-weight="600" class="font-sans">PUBLIC REPOS</text>
+    <text x="10" y="46" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${user.public_repos || repos.length}</text>
+    <text x="52" y="45" fill="#6366f1" font-size="9" font-weight="600" class="font-sans">repos</text>
 
     <!-- Tile 2: Stars -->
-    <rect x="110" y="0" width="100" height="66" rx="4" fill="url(#stat-tile)" stroke="#1e293b" stroke-width="1" />
-    <text x="10" y="18" fill="#64748b" font-size="8.5" font-weight="600" class="mono">STARGAZERS</text>
-    <text x="10" y="47" fill="#f8fafc" font-size="22" font-weight="800" class="sans">${stars}</text>
-    <text x="40" y="46" fill="#f59e0b" font-size="9" class="mono">total</text>
+    <rect x="110" y="0" width="100" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+    <text x="10" y="18" fill="#64748b" font-size="8.5" font-weight="600" class="font-sans">STARGAZERS</text>
+    <text x="10" y="46" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${stars}</text>
+    <text x="40" y="45" fill="#f59e0b" font-size="9" font-weight="600" class="font-sans">stars</text>
 
-    <!-- Tile 3: Followers -->
-    <rect x="220" y="0" width="100" height="66" rx="4" fill="url(#stat-tile)" stroke="#1e293b" stroke-width="1" />
-    <text x="10" y="18" fill="#64748b" font-size="8.5" font-weight="600" class="mono">NETWORK</text>
-    <text x="10" y="47" fill="#f8fafc" font-size="22" font-weight="800" class="sans">${user.followers || 0}</text>
-    <text x="40" y="46" fill="#10b981" font-size="9" class="mono">peers</text>
+    <!-- Tile 3: Network -->
+    <rect x="220" y="0" width="100" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+    <text x="10" y="18" fill="#64748b" font-size="8.5" font-weight="600" class="font-sans">FOLLOWERS</text>
+    <text x="10" y="46" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${user.followers || 0}</text>
+    <text x="40" y="45" fill="#10b981" font-size="9" font-weight="600" class="font-sans">peers</text>
 
-    <!-- Tile 4: Ecosystem Stack -->
-    <rect x="330" y="0" width="100" height="66" rx="4" fill="url(#stat-tile)" stroke="#1e293b" stroke-width="1" />
-    <text x="10" y="18" fill="#64748b" font-size="8.5" font-weight="600" class="mono">LANGUAGES</text>
-    <text x="10" y="47" fill="#f8fafc" font-size="22" font-weight="800" class="sans">${Object.keys(languages).length}</text>
-    <text x="48" y="46" fill="#a78bfa" font-size="9" class="mono">stacks</text>
+    <!-- Tile 4: Languages -->
+    <rect x="330" y="0" width="100" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+    <text x="10" y="18" fill="#64748b" font-size="8.5" font-weight="600" class="font-sans">LANGUAGES</text>
+    <text x="10" y="46" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">${Object.keys(languages).length}</text>
+    <text x="48" y="45" fill="#8b5cf6" font-size="9" font-weight="600" class="font-sans">stacks</text>
   </g>
 
   <!-- Right: Stack Distribution Monitor -->
   <g transform="translate(470, 48)">
-    <rect x="0" y="0" width="426" height="114" rx="4" fill="url(#stat-tile)" stroke="#1e293b" stroke-width="1" />
-    <text x="14" y="18" fill="#94a3b8" font-size="9" font-weight="600" class="mono" letter-spacing="1">PRIMARY LANGUAGE SPECTRUM (BY REPOSITORIES)</text>
+    <rect x="0" y="0" width="426" height="98" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+    <text x="14" y="18" fill="#475569" font-size="9" font-weight="700" class="font-sans" letter-spacing="0.5">PRIMARY LANGUAGE SPECTRUM (BY REPOSITORIES)</text>
 
-    <!-- Progress bar -->
+    <!-- Progress bar track -->
     <g transform="translate(14, 28)">
-      <rect x="0" y="0" width="400" height="8" rx="2" fill="#0f172a" />
+      <rect x="0" y="0" width="398" height="8" rx="2" fill="#e2e8f0" />
       <g>
         ${langSegments}
       </g>
@@ -156,18 +154,17 @@ function generateMetricsSvg(data) {
       ${langLegend}
     </g>
 
-    <!-- Bottom verified signal -->
-    <g transform="translate(14, 98)">
-      <text x="0" y="0" fill="#10b981" font-size="8.5" class="mono">● VERIFIED VIA GITHUB REST API</text>
-      <text x="215" y="0" fill="#64748b" font-size="8.5" class="mono">NODE ID: ${user.node_id || 'U_kgDOCNW0RQ'}</text>
+    <!-- Verified Badge -->
+    <g transform="translate(14, 88)">
+      <text x="0" y="0" fill="#10b981" font-size="8.5" font-weight="600" class="font-sans">● Verified via GitHub REST API</text>
+      <text x="215" y="0" fill="#94a3b8" font-size="8.5" class="font-mono">Node ID: ${user.node_id || 'U_kgDOCNW0RQ'}</text>
     </g>
   </g>
 
-  <!-- Left Bottom: Research Node Health Status -->
-  <g transform="translate(24, 126)">
-    <rect x="0" y="0" width="430" height="36" rx="4" fill="url(#stat-tile)" stroke="#1e293b" stroke-width="1" />
-    <text x="12" y="15" fill="#64748b" font-size="8.5" class="mono">RESEARCH WORKLOAD STATUS</text>
-    <text x="12" y="27" fill="#38bdf8" font-size="9.5" font-weight="600" class="mono">Active: Multimodal Learning &amp; Production Micro-SaaS Systems</text>
+  <!-- Bottom Sub-bar (Left) -->
+  <g transform="translate(24, 122)">
+    <rect x="0" y="0" width="430" height="24" rx="4" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.8" />
+    <text x="10" y="16" fill="#475569" font-size="9" font-weight="600" class="font-sans">Status: Active on Multimodal Machine Learning &amp; Web3 Infrastructure</text>
   </g>
 </svg>`;
 }
@@ -177,7 +174,7 @@ async function main() {
 
   const token = process.env.GITHUB_TOKEN || null;
   if (!token) {
-    console.log('[metrics] Warning: GITHUB_TOKEN not set, proceeding unauthenticated (rate limit: 60/hr)');
+    console.log('[metrics] Warning: GITHUB_TOKEN not set, proceeding unauthenticated');
   }
 
   let user;
@@ -187,13 +184,11 @@ async function main() {
     user = await fetchJson(`https://api.github.com/users/${USERNAME}`, token);
     console.log(`[metrics] Fetched user profile: ${user.login} (${user.public_repos} repos)`);
 
-    // Fetch up to 100 repos
     repos = await fetchJson(`https://api.github.com/users/${USERNAME}/repos?per_page=100&sort=updated`, token);
     console.log(`[metrics] Fetched ${repos.length} repositories`);
   } catch (err) {
     console.error(`[metrics] Error fetching from GitHub: ${err.message}`);
     
-    // Check if assets/profile-data.json already exists to gracefully fallback
     const fallbackPath = path.join(ASSETS_DIR, 'profile-data.json');
     if (fs.existsSync(fallbackPath)) {
       console.log('[metrics] Reusing cached profile-data.json fallback');
@@ -201,7 +196,6 @@ async function main() {
       user = cached.user;
       repos = cached.repos || [];
     } else {
-      // Conservative baseline from our initial audit
       user = {
         login: USERNAME,
         node_id: 'U_kgDOCNW0RQ',
@@ -225,7 +219,6 @@ async function main() {
     }
   });
 
-  // Ensure known verified languages are represented if repos array was empty/partial
   if (Object.keys(languages).length === 0) {
     languages['TypeScript'] = 23;
     languages['Python'] = 9;

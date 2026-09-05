@@ -1,236 +1,161 @@
 <div align="center">
-  <img src="./assets/hero.svg" alt="PTANH05 // AI Research Lab Hero" width="100%" />
+  <img src="./assets/hero.svg" alt="Phùng Thế Anh - GitHub Profile" width="100%" />
 </div>
 
-<br />
-
-```yaml
-system: PTANH-RESEARCH-NODE-01
-operator: Phùng Thế Anh (@ptanh05)
-affiliation: Hanoi, Vietnam [21.0285° N, 105.8542° E]
-focus: Reliable Multimodal Intelligence × Production Systems × Web3
-runtime: Online [Verified GitHub Telemetry]
-```
-
----
-
-### // 01. IDENTITY & TECHNICAL THESIS
-
-I am a computer science researcher and software engineer focusing on **reliable artificial intelligence**, **full-stack software systems**, and **decentralized infrastructure**.
-
-My work bridges the gap between empirical machine learning research and real-world system resilience:
-- **In AI/ML**: I investigate multimodal learning architectures under real-world distribution shifts, missing sensory modalities, and predictive uncertainty calibration.
-- **In Systems Engineering**: I design and ship multi-tenant, tamper-resistant web platforms with strict state machines, hardware trust models, and server-side RBAC.
-- **In Decentralized Protocols**: I build smart contracts (Move & Solidity) and supply-chain verification networks anchored to high-throughput blockchains (Sui & Aptos).
+<p align="center">
+  <a href="https://github.com/ptanh05">
+    <img src="https://img.shields.io/badge/GitHub-ptanh05-181717?style=flat&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  &nbsp;
+  <a href="https://x.com/GaCon_DiBo">
+    <img src="https://img.shields.io/badge/X-@GaCon__DiBo-000000?style=flat&logo=x&logoColor=white" alt="Twitter/X" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/ptanh05?tab=repositories">
+    <img src="https://img.shields.io/badge/Projects-50%2B%20Repos-6366f1?style=flat" alt="Projects" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/ptanh05">
+    <img src="https://img.shields.io/badge/Focus-Reliable%20AI%20%C2%B7%20Web3-8b5cf6?style=flat" alt="Focus" />
+  </a>
+</p>
 
 ---
 
-### // 02. CORE RESEARCH & FOCUS AREAS
+### 👨‍💻 About Me
 
-```
-┌───────────────────────────────┬───────────────────────────────┐
-│ 01 // MULTIMODAL RELIABILITY   │ 02 // PROBABILITY CALIBRATION │
-│ Dynamic modality weighting,   │ ECE minimization, temperature │
-│ cross-attention fusion under  │ scaling, and OOD detection    │
-│ acoustic/visual missingness.  │ for high-stakes decisions.    │
-├───────────────────────────────┼───────────────────────────────┤
-│ 03 // HIGH-INTEGRITY SYSTEMS  │ 04 // WEB3 INFRASTRUCTURE     │
-│ Server state machines, audit  │ Object-centric smart contracts│
-│ logging, hardware trust, and  │ (Move), cryptographic audit   │
-│ multi-tenant SaaS isolation.  │ trails, and NFT verification. │
-└───────────────────────────────┘
-```
+I'm a Computer Science student and software engineer focusing on **reliable artificial intelligence**, **production-grade software systems**, and **Web3 infrastructure**.
+
+My work sits at the intersection of:
+- **Multimodal AI & Reliability**: Studying learning systems under distribution shift, missing modalities, and probability calibration.
+- **Full-Stack & SaaS Engineering**: Architecting multi-tenant, tamper-resistant web platforms with strict security and state machines.
+- **Blockchain Protocols**: Building smart contracts and decentralized verification pipelines on **Sui** and **Aptos**.
 
 ---
 
-### // 03. SYSTEM ARCHITECTURE
-
-<div align="center">
-  <img src="./assets/activity.svg" alt="System Architecture Pipeline" width="100%" />
-</div>
-
----
-
-### // 04. FEATURED RESEARCH & EMPIRICAL BENCHMARKS
+### 🔭 Currently Exploring
 
 <table>
-<tr>
-<td width="50%" valign="top">
-
-#### 🔬 [RM-VMusic](https://github.com/ptanh05/RM-VMusic)
-**Reliable Multimodal Vietnamese Music Classification**
-
-A scientific benchmark and research framework investigating multimodal reliability, probability calibration, and distribution shifts.
-
-- **12-Class Benchmark**: Evaluated on $N=5,515$ tracks across $2,746$ unique artists with strictly verified 0% artist leakage.
-- **Missing Modality Fallbacks**: Evaluates linguistic (lyrics) and visual (cover art) representations when acoustic audio streams are corrupted or absent.
-- **Uncertainty Calibration**: Mitigates overconfident misclassifications across decades of cultural audio distribution shifts.
-
-`PyTorch` `Librosa` `Transformers` `Multimodal Fusion` `Calibration`
-
-</td>
-<td width="50%" valign="top">
-
-#### 🌊 [AI Aquaculture Guardian](https://github.com/ptanh05/AI-Based-pH-Monitoring-and-Alert-System-for-Aquaculture-Ponds)
-**Edge-Native Predictive Early-Warning System**
-
-Explainable decision-support system forecasting water quality degradation up to 150 minutes in advance for sustainable aquaculture ponds.
-
-- **Edge Performance**: Verified $1.42\text{ ms}$ (P50) inference latency on edge microprocessors.
-- **Empirical IoT Dataset**: Validated against $37,284$ real IoT sensor readings across ambient pond conditions.
-- **Human-in-the-Loop**: Generates dynamic Aquaculture Risk Scores (0–100) with rule-based intervention protocols.
-
-`Python` `Edge AI` `Time-Series Forecasting` `IoT` `Decision Support`
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top">
-
-#### ⚛️ [QFraud Shield (Quantum-Kernel-SVM)](https://github.com/ptanh05/Quantum-Kernel-SVM)
-**Hybrid Classical & Quantum ML Financial Anomaly Detection**
-
-A high-throughput fraud detection engine combining classical tree ensembles for production screening with simulated Quantum Kernel SVMs for non-linear feature boundary exploration.
-
-- **Production Core**: Classical Random Forest model delivering $\text{F1} = 84.04\%$ on imbalanced credit card transaction streams.
-- **Quantum Research Module**: Quantum state feature mapping simulated with Qiskit quantum circuits to benchmark quantum kernel advantage.
-- **Telemetry & Explainability**: 10-endpoint REST API with real-time risk scoring (0–100) and automated causal explanations.
-
-`Python` `Qiskit` `Scikit-Learn` `FastAPI` `Quantum ML` `Explainable AI`
-
-</td>
-</tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🔬 Reliable Multimodal Learning</h4>
+      <p>Investigating dynamic modality weighting and representation fallbacks when audio, visual, or textual sensory inputs are corrupted or missing.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h4>🎯 Uncertainty &amp; Calibration</h4>
+      <p>Benchmarking probability calibration (ECE), temperature scaling, and out-of-distribution (OOD) detection for high-stakes decision support.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🛡️ Production SaaS Architecture</h4>
+      <p>Building high-integrity web engines with multi-tenant isolation, dynamic challenge state machines, and hardware trust verification.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h4>⛓️ Move Ecosystem (Sui &amp; Aptos)</h4>
+      <p>Developing object-centric smart contracts, tamper-proof audit trails, and Soulbound verifiable credential platforms.</p>
+    </td>
+  </tr>
 </table>
 
 ---
 
-### // 05. PRODUCTION SYSTEMS ENGINEERING
+### 🚀 Featured Projects
 
 <table>
-<tr>
-<td width="50%" valign="top">
-
-#### 🛡️ [SmartAttend](https://github.com/ptanh05/SmartAttend)
-**Multi-Tenant University Attendance SaaS Engine**
-
-Full-stack production platform for tamper-resistant attendance verification across institutional campuses.
-
-- **Multi-Tenant Isolation**: Complete organizational boundary enforcement backed by Neon PostgreSQL and Drizzle ORM.
-- **Anti-Cheating State Machine**: Dynamic rotating 6-character OTP challenge codes with strict TTLs and hardware trust scoring (0–100).
-- **Enterprise RBAC**: Segregated portals for Students, Faculty, Department Staff, and System Administrators.
-
-`Next.js 16` `TypeScript` `Neon PostgreSQL` `Drizzle ORM` `Tailwind CSS`
-
-</td>
-<td width="50%" valign="top">
-
-#### 📋 [Smart-FYP-Management](https://github.com/ptanh05/smart-fyp-management)
-**Academic Thesis & Capstone Lifecycle Platform**
-
-End-to-end management infrastructure coordinating student project workflows, supervisor review pipelines, and cross-repo auth contracts.
-
-- **Contract-Driven Architecture**: Schema-verified authentication and cross-service role validation.
-- **Production Verification**: Complete database migrations, automated signoff pipelines, and deployment configs.
-- **Workflow State Management**: Multi-stage approvals from proposal intake to final defense grading.
-
-`Python` `TypeScript` `FastAPI` `PostgreSQL` `Docker` `Render`
-
-</td>
-</tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🔬 <a href="https://github.com/ptanh05/RM-VMusic">RM-VMusic</a></h3>
+      <p><b>Reliable Multimodal Vietnamese Music Classification</b></p>
+      <p>Scientific benchmark exploring multimodal reliability, modality missingness fallbacks, and uncertainty calibration with 0% artist leakage across 5,515 tracks.</p>
+      <p><code>Python</code> <code>PyTorch</code> <code>Transformers</code> <code>Multimodal AI</code></p>
+      <p><a href="https://github.com/ptanh05/RM-VMusic"><b>View Repository →</b></a></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🛡️ <a href="https://github.com/ptanh05/SmartAttend">SmartAttend</a></h3>
+      <p><b>Multi-Tenant University Attendance SaaS Engine</b></p>
+      <p>Production platform with dynamic 6-character rotating challenge codes, server-side state machines, anti-cheating hardware trust scoring, and strict RBAC.</p>
+      <p><code>Next.js 16</code> <code>TypeScript</code> <code>Neon PostgreSQL</code> <code>Drizzle ORM</code></p>
+      <p><a href="https://github.com/ptanh05/SmartAttend"><b>View Repository →</b></a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>⚛️ <a href="https://github.com/ptanh05/Quantum-Kernel-SVM">QFraud Shield</a></h3>
+      <p><b>Hybrid Classical &amp; Quantum ML Financial Fraud Detection</b></p>
+      <p>Financial anomaly detection platform combining a classical Random Forest engine (F1=84.04%) with Qiskit-simulated Quantum Kernel SVM modules.</p>
+      <p><code>Python</code> <code>Qiskit</code> <code>Scikit-Learn</code> <code>FastAPI</code></p>
+      <p><a href="https://github.com/ptanh05/Quantum-Kernel-SVM"><b>View Repository →</b></a></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>💊 <a href="https://github.com/ptanh05/Pharma_DNA_2025">Pharma DNA 2025</a></h3>
+      <p><b>Pharmaceutical Supply Chain Traceability on Sui</b></p>
+      <p>End-to-end medicine traceability anchoring batch provenance from manufacturer to patient using Sui Move smart contracts and IPFS metadata.</p>
+      <p><code>Sui Move</code> <code>Next.js 15</code> <code>PostgreSQL</code> <code>IPFS</code></p>
+      <p><a href="https://github.com/ptanh05/Pharma_DNA_2025"><b>View Repository →</b></a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>📋 <a href="https://github.com/ptanh05/smart-fyp-management">Smart-FYP Management</a></h3>
+      <p><b>Academic Thesis &amp; Capstone Lifecycle Platform</b></p>
+      <p>Full lifecycle system coordinating student capstone workflows, supervisor approval pipelines, and contract-verified authentication.</p>
+      <p><code>Python</code> <code>TypeScript</code> <code>FastAPI</code> <code>PostgreSQL</code></p>
+      <p><a href="https://github.com/ptanh05/smart-fyp-management"><b>View Repository →</b></a></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🌊 <a href="https://github.com/ptanh05/AI-Based-pH-Monitoring-and-Alert-System-for-Aquaculture-Ponds">AI Aquaculture Guardian</a></h3>
+      <p><b>Edge-Native Predictive Early-Warning System</b></p>
+      <p>Decision-support system forecasting water quality degradation up to 150 minutes in advance with 1.42ms edge latency across 37,284 IoT readings.</p>
+      <p><code>Python</code> <code>Edge AI</code> <code>IoT Forecasting</code> <code>Decision Support</code></p>
+      <p><a href="https://github.com/ptanh05/AI-Based-pH-Monitoring-and-Alert-System-for-Aquaculture-Ponds"><b>View Repository →</b></a></p>
+    </td>
+  </tr>
 </table>
 
 ---
 
-### // 06. WEB3 & DECENTRALIZED PROTOCOLS
+### 🛠️ Tech Stack
 
-<table>
-<tr>
-<td width="50%" valign="top">
+<p>
+  <b>AI &amp; Machine Learning</b><br />
+  <code>Python</code> &bull; <code>PyTorch</code> &bull; <code>Scikit-learn</code> &bull; <code>Transformers</code> &bull; <code>Librosa</code> &bull; <code>Qiskit</code> &bull; <code>NumPy</code> &bull; <code>Pandas</code>
+</p>
 
-#### 💊 [Pharma DNA 2025](https://github.com/ptanh05/Pharma_DNA_2025)
-**Pharmaceutical Traceability on Sui Blockchain**
+<p>
+  <b>Frontend Engineering</b><br />
+  <code>TypeScript</code> &bull; <code>JavaScript</code> &bull; <code>React</code> &bull; <code>Next.js (App Router)</code> &bull; <code>Tailwind CSS</code>
+</p>
 
-End-to-end pharmaceutical supply chain tracking anchoring batch provenance from drug manufacturer to patient delivery.
+<p>
+  <b>Backend &amp; Database Systems</b><br />
+  <code>Node.js</code> &bull; <code>FastAPI</code> &bull; <code>PostgreSQL</code> &bull; <code>Neon DB</code> &bull; <code>Supabase</code> &bull; <code>Redis</code> &bull; <code>Drizzle ORM</code>
+</p>
 
-- **On-Chain Move Contracts**: Smart contracts deployed to Sui blockchain minting immutable batch NFTs.
-- **Distributed Storage**: Decentralized metadata persistence via IPFS (Pinata) with real-time SSE event feeds.
-- **Autonomous Monitoring**: Integrated LangChain agent monitoring telemetry logs for supply chain anomalies.
+<p>
+  <b>Blockchain &amp; Decentralized Infrastructure</b><br />
+  <code>Sui Move</code> &bull; <code>Aptos Move</code> &bull; <code>Solidity</code> &bull; <code>IPFS (Pinata)</code>
+</p>
 
-`Sui Move` `Next.js 15` `TypeScript` `PostgreSQL` `Redis` `IPFS`
-
-</td>
-<td width="50%" valign="top">
-
-#### 🎓 [Aptos Certificate Platform](https://github.com/ptanh05/APTOS-CERTIFICATE-PLATFORM)
-**Verifiable Academic Credentials on Aptos**
-
-Cryptographic credential verification DApp issuing tamper-evident academic diplomas and certificates.
-
-- **Object-Centric Move Logic**: Non-transferable Soulbound credential primitives enforcing revocation registries.
-- **Client-Side Verification**: Instant cryptographic proof validation for third-party recruiters and employers.
-- **Wallet Orchestration**: Native integration with Aptos wallet adapters and transaction signing flows.
-
-`Aptos Move` `TypeScript` `Next.js` `Tailwind CSS` `Web3 SDK`
-
-</td>
-</tr>
-</table>
+<p>
+  <b>DevOps &amp; Tooling</b><br />
+  <code>Docker</code> &bull; <code>GitHub Actions</code> &bull; <code>Vercel</code> &bull; <code>Render</code> &bull; <code>Git</code>
+</p>
 
 ---
 
-### // 07. TECHNICAL CAPABILITY MATRIX
-
-```
-AI / RESEARCH
-  Languages & Libs  :: Python · PyTorch · Librosa · Scikit-Learn · Qiskit
-  Focus Disciplines :: Multimodal Learning · Distribution Shift · Probability Calibration
-  Tooling & Visuals :: Matplotlib · Seaborn · NumPy · Pandas · Edge ML Inference
-
-SYSTEMS & FULL-STACK
-  Core Frameworks   :: Next.js (App Router) · React · Node.js · Express · FastAPI
-  Languages         :: TypeScript · JavaScript · C# · Python
-  Databases & Cache :: PostgreSQL · Neon DB · Supabase · Redis · Drizzle ORM · Prisma
-
-BLOCKCHAIN & PROTOCOLS
-  Smart Contracts   :: Move (Sui & Aptos) · Solidity (EVM)
-  Ecosystems        :: Sui Network · Aptos · Cardano
-  Web3 Architecture :: Soulbound Credentials · Supply Chain NFTs · IPFS (Pinata)
-
-INFRASTRUCTURE & DEVOPS
-  CI / CD & Tooling :: GitHub Actions · Git Workflow · Vite · pnpm · npm
-  Hosting & Deploy  :: Vercel · Render · Docker · Cloudflare
-```
-
----
-
-### // 08. LIVE SYSTEM TELEMETRY
+### 📊 GitHub Telemetry
 
 <div align="center">
-  <img src="./assets/metrics.svg" alt="Dynamic System Telemetry" width="100%" />
+  <img src="./assets/metrics.svg" alt="GitHub Activity and Metrics" width="100%" />
 </div>
 
-> *Telemetry is dynamically aggregated from the GitHub REST API and refreshed every 24 hours via [`.github/workflows/update-profile.yml`](./.github/workflows/update-profile.yml).*
+<p align="center">
+  <sub><i>Metrics dynamically synchronized via GitHub Actions &bull; Last updated daily</i></sub>
+</p>
 
 ---
 
-### // 09. RESEARCH & ENGINEERING PRINCIPLES
-
-- **01 // Empirical Rigor Over Hype**: Evaluate systems under corrupted inputs, adversarial distribution shifts, and worst-case operating bounds rather than benchmark cherry-picking.
-- **02 // Production-Grade Determinism**: Machine learning models without reliable calibration, explicit state machines, and hardware security models are toy demonstrations.
-- **03 // Native Performance & Clean Architecture**: Maintain minimal external dependency footprints, strict type boundaries, and explicit database transaction guarantees.
-
----
-
-### // 10. VERIFIED COORDINATES
-
 <div align="center">
-
-[![GitHub](https://img.shields.io/badge/GitHub-@ptanh05-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ptanh05)
-&nbsp;&nbsp;
-[![Twitter/X](https://img.shields.io/badge/X-@GaCon__DiBo-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/GaCon_DiBo)
-
-</div>
-
-<div align="center">
-  <sub><code>PTANH05 // AI RESEARCH LAB · RECURRENT TELEMETRY ACTIVE</code></sub>
+  <p>Designed for GitHub Light Mode &bull; Built by <b>Phùng Thế Anh</b> (@ptanh05)</p>
 </div>
