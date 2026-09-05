@@ -20,6 +20,10 @@
   </a>
 </p>
 
+<p align="center">
+  <i>"Reliable intelligence is not measured by performance on ideal data, but by robustness when the world shifts and senses fail."</i>
+</p>
+
 ---
 
 ### 👨‍💻 About Me
@@ -116,6 +120,11 @@ My work sits at the intersection of:
 ---
 
 ### 🛠️ Tech Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,pytorch,scikitlearn,ts,js,react,nextjs,tailwind,nodejs,fastapi,postgres,supabase,solidity,docker,githubactions,git,c,cs" alt="Tech Stack Icons" />
+</p>
+<br />
 
 <p>
   <b>AI &amp; Machine Learning</b><br />
