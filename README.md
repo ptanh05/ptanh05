@@ -7,16 +7,16 @@
     <img src="https://img.shields.io/badge/GitHub-ptanh05-181717?style=flat&logo=github&logoColor=white" alt="GitHub" />
   </a>
   &nbsp;
+  <a href="https://www.linkedin.com/in/phung-the-anh-ab0167329/">
+    <img src="https://img.shields.io/badge/LinkedIn-Phùng%20Thế%20Anh-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  &nbsp;
+  <a href="mailto:anh018031@gmail.com">
+    <img src="https://img.shields.io/badge/Email-anh018031@gmail.com-EA4335?style=flat&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  &nbsp;
   <a href="https://x.com/GaCon_DiBo">
     <img src="https://img.shields.io/badge/X-@GaCon__DiBo-000000?style=flat&logo=x&logoColor=white" alt="Twitter/X" />
-  </a>
-  &nbsp;
-  <a href="https://github.com/ptanh05?tab=repositories">
-    <img src="https://img.shields.io/badge/Projects-50%2B%20Repos-6366f1?style=flat" alt="Projects" />
-  </a>
-  &nbsp;
-  <a href="https://github.com/ptanh05">
-    <img src="https://img.shields.io/badge/Focus-Reliable%20AI%20%C2%B7%20Web3-8b5cf6?style=flat" alt="Focus" />
   </a>
 </p>
 
@@ -152,6 +152,30 @@ My work sits at the intersection of:
 
 <p align="center">
   <sub><i>Metrics dynamically synchronized via GitHub Actions &bull; Last updated daily</i></sub>
+</p>
+
+---
+
+### 📬 Connect & Collaborate
+
+Feel free to reach out for research discussions, engineering collaborations, or Web3 opportunities:
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/phung-the-anh-ab0167329/">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  &nbsp;
+  <a href="mailto:anh018031@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Send_Message-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  &nbsp;
+  <a href="https://x.com/GaCon_DiBo">
+    <img src="https://img.shields.io/badge/X-Follow-000000?style=for-the-badge&logo=x&logoColor=white" alt="Twitter/X" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/ptanh05">
+    <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
 </p>
 
 ---
