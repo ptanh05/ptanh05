@@ -1,6 +1,6 @@
 {
   "username": "ptanh05",
-  "generatedAt": "2026-09-08",
+  "generatedAt": "2026-09-09",
   "user": {
     "login": "ptanh05",
     "node_id": "U_kgDOCNW0RQ",
@@ -12,8 +12,8 @@
   "forks": 0,
   "languages": {
     "Python": 9,
-    "TypeScript": 23,
     "JavaScript": 2,
+    "TypeScript": 23,
     "C#": 2,
     "Vue": 1,
     "HTML": 2,
