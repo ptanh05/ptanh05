@@ -34,7 +34,7 @@
   <g transform="translate(24, 22)">
     <circle class="live-dot" cx="4" cy="-3" r="3.5" fill="#10b981" />
     <text x="16" y="1" fill="#0f172a" font-size="11" font-weight="700" class="font-sans">GITHUB ACTIVITY &amp; ECOSYSTEM METRICS</text>
-    <text x="735" y="1" fill="#64748b" font-size="9.5" class="font-mono">LAST SYNC: 2026-10-08</text>
+    <text x="735" y="1" fill="#64748b" font-size="9.5" class="font-mono">LAST SYNC: 2026-10-09</text>
   </g>
   <line x1="24" y1="36" x2="896" y2="36" stroke="#f1f5f9" stroke-width="1.2" />
 
@@ -78,11 +78,11 @@
     <g transform="translate(14, 28)">
       <rect x="0" y="0" width="403" height="8" rx="2" fill="#e2e8f0" />
       <g>
-        <rect x="0.0" y="0" width="235.9" height="8" rx="2" fill="#3178c6" />
-        <rect x="235.9" y="0" width="92.3" height="8" rx="2" fill="#3572A5" />
-        <rect x="328.2" y="0" width="30.8" height="8" rx="2" fill="#e34c26" />
-        <rect x="359.0" y="0" width="20.5" height="8" rx="2" fill="#f7df1e" />
-        <rect x="379.5" y="0" width="20.5" height="8" rx="2" fill="#563d7c" />
+        <rect x="0.0" y="0" width="230.0" height="8" rx="2" fill="#3178c6" />
+        <rect x="230.0" y="0" width="100.0" height="8" rx="2" fill="#3572A5" />
+        <rect x="330.0" y="0" width="30.0" height="8" rx="2" fill="#e34c26" />
+        <rect x="360.0" y="0" width="20.0" height="8" rx="2" fill="#f7df1e" />
+        <rect x="380.0" y="0" width="20.0" height="8" rx="2" fill="#563d7c" />
       </g>
     </g>
 
@@ -92,13 +92,13 @@
       <g transform="translate(0, 0)">
         <circle cx="4" cy="5" r="3.5" fill="#3178c6" />
         <text x="12" y="8" fill="#334155" font-size="9" font-weight="600" class="font-sans">TypeScript</text>
-        <text x="12" y="19" fill="#94a3b8" font-size="8.5" class="font-sans">59%</text>
+        <text x="12" y="19" fill="#94a3b8" font-size="8.5" class="font-sans">57%</text>
       </g>
       
       <g transform="translate(80, 0)">
         <circle cx="4" cy="5" r="3.5" fill="#3572A5" />
         <text x="12" y="8" fill="#334155" font-size="9" font-weight="600" class="font-sans">Python</text>
-        <text x="12" y="19" fill="#94a3b8" font-size="8.5" class="font-sans">23%</text>
+        <text x="12" y="19" fill="#94a3b8" font-size="8.5" class="font-sans">25%</text>
       </g>
       
       <g transform="translate(160, 0)">
