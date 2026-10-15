@@ -34,7 +34,7 @@
   <g transform="translate(24, 22)">
     <circle class="live-dot" cx="4" cy="-3" r="3.5" fill="#10b981" />
     <text x="16" y="1" fill="#0f172a" font-size="11" font-weight="700" class="font-sans">GITHUB ACTIVITY &amp; ECOSYSTEM METRICS</text>
-    <text x="735" y="1" fill="#64748b" font-size="9.5" class="font-mono">LAST SYNC: 2026-10-14</text>
+    <text x="735" y="1" fill="#64748b" font-size="9.5" class="font-mono">LAST SYNC: 2026-10-15</text>
   </g>
   <line x1="24" y1="36" x2="896" y2="36" stroke="#f1f5f9" stroke-width="1.2" />
 
@@ -51,7 +51,7 @@
     <g transform="translate(109, 0)">
       <rect x="0" y="0" width="102" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
       <text x="12" y="20" fill="#64748b" font-size="8.5" font-weight="600" class="font-sans">STARGAZERS</text>
-      <text x="12" y="47" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">1<tspan fill="#f59e0b" font-size="9" font-weight="600" dx="4" dy="-2">stars</tspan></text>
+      <text x="12" y="47" fill="#0f172a" font-size="22" font-weight="800" class="font-sans">2<tspan fill="#f59e0b" font-size="9" font-weight="600" dx="4" dy="-2">stars</tspan></text>
     </g>
 
     <!-- Tile 3: Activity -->
