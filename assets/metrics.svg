@@ -34,7 +34,7 @@
   <g transform="translate(24, 22)">
     <circle class="live-dot" cx="4" cy="-3" r="3.5" fill="#10b981" />
     <text x="16" y="1" fill="#0f172a" font-size="11" font-weight="700" class="font-sans">GITHUB ACTIVITY &amp; ECOSYSTEM METRICS</text>
-    <text x="735" y="1" fill="#64748b" font-size="9.5" class="font-mono">LAST SYNC: 2026-10-19</text>
+    <text x="735" y="1" fill="#64748b" font-size="9.5" class="font-mono">LAST SYNC: 2026-10-20</text>
   </g>
   <line x1="24" y1="36" x2="896" y2="36" stroke="#f1f5f9" stroke-width="1.2" />
 
@@ -80,9 +80,9 @@
       <g>
         <rect x="0.0" y="0" width="230.0" height="8" rx="2" fill="#3178c6" />
         <rect x="230.0" y="0" width="100.0" height="8" rx="2" fill="#3572A5" />
-        <rect x="330.0" y="0" width="30.0" height="8" rx="2" fill="#e34c26" />
+        <rect x="330.0" y="0" width="30.0" height="8" rx="2" fill="#563d7c" />
         <rect x="360.0" y="0" width="20.0" height="8" rx="2" fill="#f7df1e" />
-        <rect x="380.0" y="0" width="20.0" height="8" rx="2" fill="#563d7c" />
+        <rect x="380.0" y="0" width="20.0" height="8" rx="2" fill="#e34c26" />
       </g>
     </g>
 
@@ -102,8 +102,8 @@
       </g>
       
       <g transform="translate(160, 0)">
-        <circle cx="4" cy="5" r="3.5" fill="#e34c26" />
-        <text x="12" y="8" fill="#334155" font-size="9" font-weight="600" class="font-sans">HTML</text>
+        <circle cx="4" cy="5" r="3.5" fill="#563d7c" />
+        <text x="12" y="8" fill="#334155" font-size="9" font-weight="600" class="font-sans">CSS</text>
         <text x="12" y="19" fill="#94a3b8" font-size="8.5" class="font-sans">8%</text>
       </g>
       
@@ -114,8 +114,8 @@
       </g>
       
       <g transform="translate(320, 0)">
-        <circle cx="4" cy="5" r="3.5" fill="#563d7c" />
-        <text x="12" y="8" fill="#334155" font-size="9" font-weight="600" class="font-sans">CSS</text>
+        <circle cx="4" cy="5" r="3.5" fill="#e34c26" />
+        <text x="12" y="8" fill="#334155" font-size="9" font-weight="600" class="font-sans">HTML</text>
         <text x="12" y="19" fill="#94a3b8" font-size="8.5" class="font-sans">5%</text>
       </g>
     </g>
